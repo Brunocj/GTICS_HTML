@@ -171,56 +171,89 @@
 		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
 			<ul class="navbar-nav flex-column" id="sideNavbar">
 				<li class="nav-item">
-					<a class="nav-link  active " href="#">
+					<a class="nav-link active" href="#">
 						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-house"></i></span>  <!-- icono-->
-							<span class="nav-link-text">Algo</span>
+							<span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
+							<span class="nav-link-text">DashBoard</span>
 						</div>
 					</a>
 				</li>
+
+
 
 
 				<li class="nav-item mt-6 mb-3">
-					<span class="nav-label">Division</span>
+					<span class="nav-label">Opciones</span>
 				</li>
 
-
-				<li class="nav-item">
-					<a class="nav-link" href="#">
-						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
-							<span class="nav-link-text">Algo mas</span>
-						</div>
-					</a>
-				</li>
-
-				<!-- Desplegable -->
+				<!-- Desplegable de los Clientes-->
 				<li class="nav-item">
 					<a
-							class="nav-link  collapsed "
+							class="nav-link collapsed"
 							href="#"
 							data-bs-toggle="collapse"
-							data-bs-target="#navCategoriesOrders"
+							data-bs-target="#navCustomer"
 							aria-expanded="false"
-							aria-controls="navCategoriesOrders"
+							aria-controls="navCustomer"
 					>
 						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-bag"></i></span>
-							<span class="nav-link-text">Desplegable</span>
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Usuarios</span>
+							<span class="badge bg-light-success text-dark-success ms-2">Vagos</span>
 						</div>
 					</a>
-					<div id="navCategoriesOrders" class="collapse " data-bs-parent="#sideNavbar">
+					<div id="navCustomer" class="collapse" data-bs-parent="#sideNavbar">
 						<ul class="nav flex-column">
 							<li class="nav-item">
-								<a class="nav-link " href="#">Opcion 1</a>
+								<a class="nav-link" href="customers.html">Usuarios</a>
 							</li>
 							<!-- Nav item -->
 							<li class="nav-item">
-								<a class="nav-link " href="#">Opcion 2</a>
+								<a class="nav-link" href="create_customers.html">Crear Usuario</a>
+							</li>
+							<!-- Nav item -->
+							<li class="nav-item">
+								<a class="nav-link" href="customers-edits.html">Editar Usuario</a>
 							</li>
 						</ul>
 					</div>
 				</li>
+
+				<!-- Desplegable de los Proveedores-->
+				<li class="nav-item">
+					<a class="nav-link" href="vendor-grid.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-truck"></i></span>
+							<span class="nav-link-text">Proveedores</span>
+						</div>
+					</a>
+				</li>
+
+				<!-- Opción de los productor-->
+				<li class="nav-item">
+					<a class="nav-link" href="categories.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+							<span class="nav-link-text">Inventario de productos</span>
+						</div>
+					</a>
+				</li>
+
+
+				<!-- Opción de solicitudes de Agente-->
+				<li class="nav-item">
+					<a class="nav-link" href="agent-request.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
+							<span class="nav-link-text">Solicitudes para Agente</span>
+						</div>
+					</a>
+				</li>
+
+
+
+
+
 			</ul>
 		</div>
 	</div>
@@ -237,43 +270,83 @@
 		<div class="navbar-vertical-content flex-grow-1" data-simplebar="">
 			<ul class="navbar-nav flex-column">
 				<li class="nav-item">
-					<a class="nav-link  active " href="#">
+					<a class="nav-link active" href="#">
 						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-house"></i></span>
-							<span>Algo</span>
+							<span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
+							<span class="nav-link-text">DashBoard</span>
 						</div>
 					</a>
 				</li>
+
+
+
+
 				<li class="nav-item mt-6 mb-3">
-					<span class="nav-label">Division</span>
+					<span class="nav-label">Opciones</span>
 				</li>
+
+				<!-- Desplegable de los Clientes-->
 				<li class="nav-item">
-					<a class="nav-link " href="#">
+					<a
+							class="nav-link collapsed"
+							href="#"
+							data-bs-toggle="collapse"
+							data-bs-target="#navCustomer"
+							aria-expanded="false"
+							aria-controls="navCustomer"
+					>
 						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
-							<span class="nav-link-text">Algo mas</span>
+							<span class="nav-link-icon"><i class="bi bi-people"></i></span>
+							<span class="nav-link-text">Usuarios</span>
+							<span class="badge bg-light-success text-dark-success ms-2">Vagos</span>
 						</div>
 					</a>
-				</li>
-				<!-- desplegable en la barra para celular-->
-				<li class="nav-item">
-					<a class="nav-link  collapsed " href="#" data-bs-toggle="collapse" data-bs-target="#navOrders" aria-expanded="false" aria-controls="navOrders">
-						<div class="d-flex align-items-center">
-							<span class="nav-link-icon"><i class="bi bi-bag"></i></span>
-							<span class="nav-link-text">Desplegable</span>
-						</div>
-					</a>
-					<div id="navOrders" class="collapse " data-bs-parent="#sideNavbar">
+					<div id="navCustomer" class="collapse" data-bs-parent="#sideNavbar">
 						<ul class="nav flex-column">
 							<li class="nav-item">
-								<a class="nav-link " href="#">Opcion 1</a>
+								<a class="nav-link" href="customers.html">Usuarios</a>
 							</li>
 							<!-- Nav item -->
 							<li class="nav-item">
-								<a class="nav-link " href="#">Opcion 2</a>
+								<a class="nav-link" href="create_customers.html">Crear Usuario</a>
+							</li>
+							<!-- Nav item -->
+							<li class="nav-item">
+								<a class="nav-link" href="customers-edits.html">Editar Usuario</a>
 							</li>
 						</ul>
 					</div>
+				</li>
+
+				<!-- Desplegable de los Proveedores-->
+				<li class="nav-item">
+					<a class="nav-link" href="vendor-grid.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-truck"></i></span>
+							<span class="nav-link-text">Proveedores</span>
+						</div>
+					</a>
+				</li>
+
+				<!-- Opción de los productor-->
+				<li class="nav-item">
+					<a class="nav-link" href="categories.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-cart"></i></span>
+							<span class="nav-link-text">Inventario de productos</span>
+						</div>
+					</a>
+				</li>
+
+
+				<!-- Opción de solicitudes de Agente-->
+				<li class="nav-item">
+					<a class="nav-link" href="agent-request.html">
+						<div class="d-flex align-items-center">
+							<span class="nav-link-icon"><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
+							<span class="nav-link-text">Solicitudes para Agente</span>
+						</div>
+					</a>
 				</li>
 
 
