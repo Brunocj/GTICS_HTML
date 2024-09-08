@@ -362,45 +362,39 @@
 					<!-- row -->
 					<div class="row">
 						<div class="col-xl-7 col-lg-6 col-md-12 col-12 mb-6">
-							<!-- card -->
-							<div class="card h-100 card-lg">
-								<div class="card-body p-6">
-									<!-- heading -->
-									<div class="d-flex justify-content-between">
-										<div>
-											<h3 class="mb-1 fs-5">Revenue</h3>
-											<small>(+63%) than last year)</small>
-										</div>
-										<div>
-											<!-- select option -->
-											<select class="form-select">
-												<option selected>2019</option>
-												<option value="2023">2020</option>
-												<option value="2024">2021</option>
-												<option value="2025">2022</option>
-												<option value="2025">2023</option>
-											</select>
-										</div>
-									</div>
-									<!-- chart -->
-									<div id="revenueChart" class="mt-6"></div>
+						  <!-- card -->
+						  <div class="card h-100 card-lg">
+							<div class="card-body p-6">
+							  <!-- heading -->
+							  <div class="d-flex justify-content-between">
+								<div>
+								  <h3 class="mb-1 fs-5">Usuarios Registrados vs Activos</h3>
+								  <small>(+63%) respecto al año anterior</small>
 								</div>
+								
+							  </div>
+							  <!-- chart -->
+							  <div id="registeredVsActiveChart" class="mt-6" style="height: 200px;"></div> <!-- Ajustado a 300px -->
 							</div>
+						  </div>
 						</div>
+						
 						<div class="col-xl-5 col-lg-6 col-12 mb-6">
-							<!-- card -->
-							<div class="card h-100 card-lg">
-								<!-- card body -->
-								<div class="card-body p-6">
-									<!-- heading -->
-									<h3 class="mb-0 fs-5">Usuarios</h3>
-									<div class="mt-4" style="height: 40vh;">
-										<div id="usersChart" style="height: 100%;"></div>
-									</div>
-								</div>
+						  <!-- card -->
+						  <div class="card h-100 card-lg">
+							<!-- card body -->
+							<div class="card-body p-6">
+							  <!-- heading -->
+							  <h3 class="mb-0 fs-5">Usuarios</h3>
+							  <div class="mt-4" style="height: 40vh;"> <!-- Ajuste de altura a 300px -->
+								<div id="usersChart" style="height: 350px; width: 100%; max-width: 400px;"></div> <!-- Ajuste de max-width a 400px -->
+							  </div>
 							</div>
+						  </div>
 						</div>
-					</div>
+					  </div>
+					  
+					  
 					<!-- row -->
 					<div class="row">
 						<div class="col-xl-6 col-lg-6 col-md-12 col-12 mb-6">
@@ -928,29 +922,77 @@
 <!-- Theme JS -->
 <script src="../assets/js/theme.min.js"></script>
 
+<script>
+	var options = {
+		chart: {
+			type: 'donut'
+		},
+		series: [99, 55, 23, 33],
+		labels: ['Agente 1', 'Agente 2', 'Agente 3', 'Sin asignar'],
+		responsive: [{
+			breakpoint: 480,
+			options: {
+
+				legend: {
+					position: 'bottom'
+				}
+			}
+		}],
+		colors: ['#008FFB', '#00E396', '#FEB019', '#FF4560'],
+
+	};
+
+	var chart = new ApexCharts(document.querySelector("#usersChart"), options);
+	chart.render();
+</script>
 	  <script>
-		  var options = {
-			  chart: {
-				  type: 'donut'
-			  },
-			  series: [99, 55, 23, 33],
-			  labels: ['Agente 1', 'Agente 2', 'Agente 3', 'Sin asignar'],
-			  responsive: [{
-				  breakpoint: 480,
-				  options: {
+			var chartOptions = {
+		chart: {
+		type: 'area',
+		height: '230px',
+		width: '100%'
+		},
+		series: [{
+		name: 'Usuarios Registrados',
+		data: [150, 180, 200, 220, 250, 300, 350]  // Datos de ejemplo
+		}, {
+		name: 'Usuarios Activos',
+		data: [80, 100, 120, 140, 160, 180, 200]  // Datos de ejemplo
+		}],
+		xaxis: {
+		categories: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul']  // Meses
+		},
+		colors: ['#00E396', '#FEB019'],  // Colores de las líneas
+		dataLabels: {
+		enabled: false
+		},
+		stroke: {
+		curve: 'smooth'
+		},
+		legend: {
+		position: 'top'
+		},
+		fill: {
+		type: 'gradient',
+		gradient: {
+			shade: 'light',
+			type: 'vertical',
+			opacityFrom: 0.7,
+			opacityTo: 0.3
+		}
+		}
+	};
 
-					  legend: {
-						  position: 'bottom'
-					  }
-				  }
-			  }],
-			  colors: ['#008FFB', '#00E396', '#FEB019', '#FF4560'],
+	var registeredVsActiveChart = new ApexCharts(document.querySelector("#registeredVsActiveChart"), chartOptions);
+	registeredVsActiveChart.render();
 
-		  };
+	// Función para actualizar la gráfica cuando se selecciona otro año
+	function updateChart() {
+		var selectedYear = document.getElementById("yearSelect").value;
+		// Aquí puedes agregar la lógica para actualizar los datos de acuerdo al año seleccionado
+		console.log("Año seleccionado: ", selectedYear);
+	}
 
-		  var chart = new ApexCharts(document.querySelector("#usersChart"), options);
-		  chart.render();
-	  </script>
-
+	</script>
    </body>
 </html>
