@@ -18,6 +18,35 @@
 
 <!-- Theme CSS -->
 <link rel="stylesheet" href="../assets/css/theme.min.css">
+   <style>
+      .info-box {
+         display: flex;
+         padding: 20px;
+         border-radius: 8px;
+         margin-top: -100px;
+      }
+      .highlight-text {
+         font-style: italic; /* Texto en cursiva */
+         font-weight: bold; /* Texto en negritas */
+         color:black;
+         letter-spacing: 1px; /* Espaciado entre letras */
+         text-align: center; /* Centrar el texto */
+         font-family: 'Arial', sans-serif; /* Puedes cambiar la fuente si lo prefieres */
+         font-size: 1.2em; /* Tamaño del texto ajustable */
+         text-transform: uppercase; /* Convertir el texto a mayúsculas */
+         margin-top: 20px;
+      }
+      .button-container {
+         text-align: center; /* Centra el botón horizontalmente */
+      }
+      .table {
+         width: 100%; /* Asegura que la tabla ocupe todo el ancho disponible */
+         text-align: center; /* Centra el contenido horizontalmente */
+      }
+      .table tbody td {
+         color: black; /* Texto negro para el cuerpo de la tabla */
+      }
+   </style>
 
    </head>
 
@@ -741,6 +770,19 @@
             <!-- COONTENIDO DE LA PAGINA -->
             <main class="main-content-wrapper">
                <section class="container">
+                  <div class="info-box d-flex align-items-center mb-4">
+                     <img src="carrito.png" alt="Carrito" class="cart-image me-3">
+                     <div class="info-text">
+                       <h4>¡Bienvenido a ExpressDeals!</h4>
+                       <ul>
+                         <li>Dirígete a la sección de "Productos" para explorar los productos que puedes importar según tu zona.</li>
+                         <li>En el carrito de compras podrás ver los productos que has seleccionado.</li>
+                         <li>Si necesitas ayuda, puedes solicitar apoyo a un agente de compra o interactuar con el chatbot en la sección de "Soporte Técnico".</li>
+                         <li>Revisa reseñas de productos, publica las tuyas y haz preguntas en el foro.</li>
+                       </ul>
+                       <p class="highlight-text">¡EXPLORA Y GESTIONA TUS COMPRAS DE FORMA FÁCIL Y SEGURA!</p>
+                     </div>
+                   </div>
 				<table class="table">
 					<thead class="table-dark">
 					  <tr>
@@ -751,28 +793,30 @@
 					</thead>
 					<tbody>
 					  <tr>
-						<th scope="row">Cell A</th>
-						<td>Cell B</td>
+						<th scope="row">Pedido 1</th>
+						<td>Monto 1</td>
 						<td>Creado</td>
 					  </tr>
 					  <tr>
-						<th scope="row">Cell A</th>
-						<td>Cell B</td>
+						<th scope="row">Pedido 2</th>
+						<td>Monto 2</td>
 						<td>En validación</td>
 					  </tr>
 					  <tr>
-						<th scope="row">Cell A</th>
-						<td>Cell B</td>
+						<th scope="row">Pedido 3</th>
+						<td>Monto 3</td>
 						<td>En proceso</td>
 					  </tr>
 					  <tr></tr>
-						<th scope="row">Cell A</th>
-						<td>Cell B</td>
+						<th scope="row">Pedido 4</th>
+						<td>Monto 4</td>
 						<td>Recibido</td>
 					  </tr>
 					</tbody>
 				  </table>
-				  <button type="button" class="btn btn-outline-info mb-2">Ver más</button>
+				  <div class="button-container">
+               <button type="button" class="btn btn-outline-info mb-2">Ver más</button>
+             </div>
                </section>
             </main>
          </div>
