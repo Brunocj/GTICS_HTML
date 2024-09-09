@@ -35,6 +35,26 @@
 		   }
 	   </style>
 
+	   <!--POP UP-->
+	   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	   <style>
+		   .custom-popup{
+			   border-radius: 10px;
+		   }
+		   .swal2-styled{
+			   border-radius: 8px;
+		   }
+		   .swal2-styled.swal2-confirm {
+			   background-color: #28a745;
+			   color: white;
+		   }
+
+		   .swal2-styled.swal2-cancel {
+			   background-color: #dc3545;
+			   color: white;
+		   }
+	   </style>
+
 
    </head>
 
@@ -351,7 +371,7 @@
 								   <tbody>
 								   <tr>
 									   <td>
-										   <a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a>
+										   <a ><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a>
 									   </td>
 									   <td>Jesus </td>
 
@@ -369,7 +389,7 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="ordenesDeUsuario.html"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
@@ -378,7 +398,7 @@
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
+													   <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modal2" ><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
 												   </li>
 											   </ul>
 										   </div>
@@ -386,7 +406,7 @@
 								   </tr>
 								   <tr>
 									   <td>
-										   <a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a>
+										   <a href="#!"><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a>
 									   </td>
 									   <td>Jesus </td>
 									   <td>Alvarado</td>
@@ -403,16 +423,16 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
+													   <a class="dropdown-item" href="ordenesDeUsuario.html"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
+													   <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modal2" ><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
 												   </li>
 											   </ul>
 										   </div>
@@ -420,7 +440,7 @@
 								   </tr>
 								   <tr>
 									   <td>
-										   <a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a>
+										   <a href="#!"><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a>
 									   </td>
 									   <td>Jesus </td>
 
@@ -436,16 +456,16 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
+													   <a class="dropdown-item" href="ordenesDeUsuario.html"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
+													   <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modal2" ><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
 												   </li>
 											   </ul>
 										   </div>
@@ -453,7 +473,7 @@
 								   </tr>
 								   <tr>
 									   <td>
-										   <a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a>
+										   <a href="#!"><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a>
 									   </td>
 									   <td>Jesus </td>
 									   <td>Alvarado</td>
@@ -468,23 +488,23 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
+													   <a class="dropdown-item" href="ordenesDeUsuario.html"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
+													   <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modal2" ><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
 												   </li>
 											   </ul>
 										   </div>
 									   </td>
 								   </tr>
 								   <tr>
-									   <td><a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a></td>
+									   <td><a href="#!"><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a></td>
 									   <td>Jesus </td>
 									   <td>Alvarado</td>
 									   <td>a20211688@pucp.edu.pe</td>
@@ -497,16 +517,16 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
+													   <a class="dropdown-item" href="ordenesDeUsuario.html"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
+													   <a class="dropdown-item" href="" data-bs-toggle="modal" data-bs-target="#modal2" ><i class="bi bi-person-fill me-3"></i>Ver perfil </a>
 												   </li>
 											   </ul>
 										   </div>
@@ -514,7 +534,7 @@
 								   </tr>
 								   <tr>
 									   <td>
-										   <a href="#!"><img src="../assets/images/avatar/avatar-10.jpg" alt="" class="icon-shape icon-md" /></a>
+										   <a href="#!"><img src="../assets/images/avatar/avatar-4.jpg" alt="" class="icon-shape icon-md" /></a>
 									   </td>
 									   <td>Jesus </td>
 									   <td>Alvarado</td>
@@ -531,7 +551,7 @@
 											   </a>
 											   <ul class="dropdown-menu">
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-person-fill-slash me-3"></i> Banear</a>
+													   <a class="dropdown-item banearUsuario btn"  data-bs-toggle="tooltip" data-bs-placement="bottom" ><i class="bi bi-person-fill-slash me-3 "></i> Banear</a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-cart-check me-3"></i>Ver órdenes </a>
@@ -570,6 +590,68 @@
 
 
 
+	   <!-- Modal: PERFIL DE USUARIO -->
+	   <div class="modal fade " id="modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+		   <div class="modal-dialog modal-dialog-centered " role="document">
+			   <div class="modal-content">
+
+				   <div class="modal-body">
+
+					   <div class="text-center position-relative">
+
+						   <a href="#!">
+							   <img src="../assets/images/avatar/avatar-4.jpg"
+									alt="Imagen del agente"
+									class="mt-3 mb-3 img-fluid" style="border-radius: 8px; height: 40vh;" />
+						   </a>
+					   </div>
+					   <hr style="border: 1px solid #949494;">
+					   <div>
+						   <h1 class=" text-center">
+							   Jesus Alvarado
+						   </h1>
+						   <div class="text-small mb-1 text-center" >
+							   <h5  class="text-decoration-none" style="color: #696969"><small>a20211688@pucp.edu.pe</small></h5>
+							   <h5  class="text-decoration-none" style="color: #696969"><small>Total gastado: S/. 1100.00</small></h5>
+							   <h5  class="text-decoration-none" style="color: #696969"><small>Total de órdenes: 5</small></h5>
+							   <h5  class="text-decoration-none" style="color: #696969"><small>12 órdenes asignadas</small></h5>
+
+						   </div>
+					   </div>
+
+
+				   </div>
+				   <div class="modal-footer">
+					   <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+
+				   </div>
+			   </div>
+		   </div>
+	   </div>
+	   <!--POP UP BANEAR USUARIOS-->
+	   <script>
+		   document.querySelectorAll('.banearUsuario').forEach(button => {
+			   button.addEventListener('click', function() {
+				   Swal.fire({
+					   showCloseButton: true,
+					   title: 'Confirmar ',
+					   text: "¿Está seguro de que deseas banear el usuario Jesus Alvarado?",
+					   icon: 'warning',
+					   showCancelButton: true,
+					   confirmButtonText: 'Confirmar',
+					   cancelButtonText: 'Cancelar',
+					   customClass: {
+						   popup: 'custom-popup'
+					   }
+				   }).then((result) => {
+					   if (result.isConfirmed) {
+						   Swal.fire('Usuario baneado', 'Se ha baneado al usuario exitosamente.', 'success');
+					   }
+				   });
+			   });
+		   });
+	   </script>
+
 
    </main>
 
@@ -600,7 +682,12 @@
 		<script src="../assets/libs/sticky-sidebar/dist/sticky-sidebar.min.js"></script>
 		<script src="../assets/js/vendors/sticky.js"></script>
 		<script src="../assets/js/vendors/modal.js"></script>
+
 	</div>
+
+
+
+
 
    </body>
 </html>

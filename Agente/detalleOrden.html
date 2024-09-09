@@ -34,6 +34,25 @@
 			   width: 220px;
 		   }
 	   </style>
+	   <!--POP UP-->
+	   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	   <style>
+		   .custom-popup{
+			   border-radius: 10px;
+		   }
+		   .swal2-styled{
+			   border-radius: 8px;
+		   }
+		   .swal2-styled.swal2-confirm {
+			   background-color: #28a745;
+			   color: white;
+		   }
+
+		   .swal2-styled.swal2-cancel {
+			   background-color: #dc3545;
+			   color: white;
+		   }
+	   </style>
 
 
    </head>
@@ -339,7 +358,8 @@
 								   <!-- button -->
 								   <div class="ms-md-3">
 									   <a href="#" class="btn btn-primary">Guardar</a>
-									   <a href="#" class="btn btn-danger"><i class="bi bi-trash me-3"></i>Eliminar</a>
+									   <a class="btn btn-danger eliminarOrden" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
+
 								   </div>
 							   </div>
 						   </div>
@@ -489,6 +509,29 @@
 			   </div>
 		   </div>
 	   </div>
+	   <!--POP UP ELIMINAR ORDEN-->
+	   <script>
+		   document.querySelectorAll('.eliminarOrden').forEach(button => {
+			   button.addEventListener('click', function() {
+				   Swal.fire({
+					   showCloseButton: true,
+					   title: 'Confirmar ',
+					   text: "¿Está seguro de que deseas eliminar esta orden?",
+					   icon: 'warning',
+					   showCancelButton: true,
+					   confirmButtonText: 'Eliminar',
+					   cancelButtonText: 'Cancelar',
+					   customClass: {
+						   popup: 'custom-popup'
+					   }
+				   }).then((result) => {
+					   if (result.isConfirmed) {
+						   Swal.fire('Orden eliminada', 'Se ha eliminado la orden exitosamente.', 'success');
+					   }
+				   });
+			   });
+		   });
+	   </script>
 	   </main>
 
 
