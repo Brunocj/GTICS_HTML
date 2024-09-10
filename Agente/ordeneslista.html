@@ -341,11 +341,11 @@
 								   <!-- select -->
 								   <select class="form-select">
 									   <option selected>Estado</option>
-									   <option value="Success">Todos</option>
-									   <option value="Pending">Pendiente</option>
-									   <option value="Pending">Sin asignar</option>
-									   <option value="Cancel">En progreso</option>
-									   <option value="Cancel">Resuelta</option>
+									   <option value="Success">Todos las órdenes</option>
+									   <option value="Pending">Ordenes sin aginar</option>
+									   <option value="Pending">Ordenes pendientes</option>
+									   <option value="Cancel">Ordenes en progreso</option>
+									   <option value="Cancel">Ordenes resueltas</option>
 
 								   </select>
 							   </div>
@@ -383,10 +383,12 @@
 													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-												   </li>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
 												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
+													   <a class="dropdown-item" href="chatVistaAgente.html"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill me-3"></i>Descargar</a>
@@ -411,8 +413,40 @@
 													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
+												   <li>
+													   <a class="dropdown-item" href="chatVistaAgente.html"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
+												   <li>
+													   <a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill me-3"></i>Descargar</a>
+												   </li>
+											   </ul>
+										   </div>
+									   </td>
+								   </tr>
+								   <tr>
+									   <td><a href="#!"><img src="../assets/images/category/atta-rice-dal.png" alt="" class="icon-shape icon-md" /></a></td>
+									   <td>#1234</td>
+									   <td>07-07-24</td>
+									   <td><span class="badge bg-light-info text-dark-info">En progreso</span></td>
+									   <td> S/. 145.00 </td>
+									   <td>
+										   <div class="dropdown">
+											   <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
+												   <i class="feather-icon icon-more-vertical fs-5"></i>
+											   </a>
+											   <ul class="dropdown-menu">
+												   <li>
+													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
+												   </li>
+												   <li>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
@@ -439,36 +473,10 @@
 													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-												   </li>
-												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
-												   </li>
-												   <li>
-													   <a class="dropdown-item" href="#"><i class="bi bi-file-earmark-arrow-down-fill me-3"></i>Descargar</a>
-												   </li>
-											   </ul>
-										   </div>
-									   </td>
-								   </tr>
-								   <tr>
-									   <td><a href="#!"><img src="../assets/images/category/atta-rice-dal.png" alt="" class="icon-shape icon-md" /></a></td>
-									   <td>#1234</td>
-									   <td>07-07-24</td>
-									   <td><span class="badge bg-light-info text-dark-info">En progreso</span></td>
-									   <td> S/. 145.00 </td>
-									   <td>
-										   <div class="dropdown">
-											   <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
-												   <i class="feather-icon icon-more-vertical fs-5"></i>
-											   </a>
-											   <ul class="dropdown-menu">
-												   <li>
-													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
-												   </li>
-												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-												   </li>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
@@ -495,8 +503,10 @@
 													   <a class="dropdown-item" href="detalleOrden.html"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-												   </li>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
@@ -523,8 +533,10 @@
 													   <a class="dropdown-item" href="#"><i class="bi bi-eye-fill me-3"></i> Ver / Editar</a>
 												   </li>
 												   <li>
-													   <a class="dropdown-item eliminarOrden btn" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-												   </li>
+													<a class="dropdown-item" href="#" onclick="eliminarOrden()">
+														<i class="bi bi-trash me-3"></i>Eliminar
+													</a>
+												</li>
 												   <li>
 													   <a class="dropdown-item" href="#"><i class="bi bi-wechat me-3"></i>Chat </a>
 												   </li>
@@ -535,7 +547,30 @@
 										   </div>
 									   </td>
 								   </tr>
-
+								   <tr>
+									<td><a href="#!"><img src="../assets/images/category/atta-rice-dal.png" alt="" class="icon-shape icon-md" /></a></td>
+									<td>#1664</td>
+									<td>07-07-24</td>
+									<td><span class="badge bg-light-danger text-dark-danger">Sin asignar</span></td>
+									<td> S/. 135.00 </td>
+									<td>
+										<div class="dropdown">
+											<a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
+												<i class="feather-icon icon-more-vertical fs-5"></i>
+											</a>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="#"><i class="bi bi-eye-fill me-3"></i> Ver</a>
+												</li>
+	
+												<li>
+													<a class="dropdown-item" href="#" onclick="asignacion()">
+														<i class="bi bi-person-check-fill me-3"></i>Auto-asignarse orden
+													</a>												</li>
+											</ul>
+										</div>
+									</td>
+								</tr>
 								   </tbody>
 							   </table>
 						   </div>
@@ -558,26 +593,71 @@
 	   </div>
 	   <!--POP UP ELIMINAR ORDEN-->
 	   <script>
-		   document.querySelectorAll('.eliminarOrden').forEach(button => {
-			   button.addEventListener('click', function() {
-				   Swal.fire({
+		   async function eliminarOrden() {
+            const { value: reason } = await Swal.fire({
+                title: "Eliminar Orden",
+                text: "¿Realmente desea eliminar esta orden?",
+                input: "select",
+                inputOptions: {
+                    "Motivos de eliminación": {
+                        "false-data": "Datos falsos",
+                        "duplicate": "Duplicado",
+                        "price-error": "Error en precio"
+                    }
+                },
+                inputPlaceholder: "Selecciona un motivo",
+                showCancelButton: true,
+                confirmButtonText: 'Eliminar',
+                cancelButtonText: 'Cancelar',
+                customClass: {
+                    confirmButton: 'btn btn-success',
+                    cancelButton: 'btn btn-danger'
+                },
+                inputValidator: (value) => {
+                    return new Promise((resolve) => {
+                        if (value) {
+                            resolve();
+                        } else {
+                            resolve("Debes seleccionar un motivo.");
+                        }
+                    });
+                }
+            });
+
+            if (reason) {
+                Swal.fire({
+                    title: 'Se ha eliminado la orden',
+                    html: '<small>Por favor revisar el apartado de órdenes eliminadas.</small>',
+                    icon: 'success',
+                    confirmButtonText: 'Aceptar'
+                });
+            }
+        }
+
+
+
+		   function asignacion() {
+			Swal.fire({
 					   showCloseButton: true,
-					   title: 'Confirmar ',
-					   text: "¿Está seguro de que deseas eliminar esta orden?",
+					   title: 'Auto-asignación',
+					   text: '¿Estás seguro de auto-asignarte esta orden?',
 					   icon: 'warning',
 					   showCancelButton: true,
-					   confirmButtonText: 'Eliminar',
+					   confirmButtonText: 'Sí',
 					   cancelButtonText: 'Cancelar',
 					   customClass: {
 						   popup: 'custom-popup'
 					   }
 				   }).then((result) => {
 					   if (result.isConfirmed) {
-						   Swal.fire('Orden eliminada', 'Se ha eliminado la orden exitosamente.', 'success');
-					   }
+						Swal.fire(
+                    'Auto-asignado',
+                    'Se ha auto-asignado la orden.',
+                    'success'
+
+                );}
 				   });
-			   });
-		   });
+    }
 	   </script>
 
 

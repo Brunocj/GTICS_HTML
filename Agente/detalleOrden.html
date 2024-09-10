@@ -346,20 +346,29 @@
 							   </div>
 							   <!-- select option -->
 							   <div class="d-md-flex">
-								   <div class="mb-2 mb-md-0">
-									   <select class="form-select">
-										   <option selected>Estado</option>
-										   <option value="Success">Todos</option>
-										   <option value="Pending">Pendiente</option>
-										   <option value="Cancel">En progreso</option>
-										   <option value="Cancel">Resuelta</option>
-									   </select>
-								   </div>
+								<div class="mb-2 mb-md-0">
+									<select class="form-select" style="cursor: pointer;">
+										<option selected>Estado</option>
+										<option value="Success">Todos</option>
+										<option value="Pending">Pendiente</option>
+										<option value="InProgress">En progreso</option>
+										<option value="Resolved">Resuelta</option>
+									</select>
+								</div>
 								   <!-- button -->
 								   <div class="ms-md-3">
-									   <a href="#" class="btn btn-primary">Guardar</a>
-									   <a class="btn btn-danger eliminarOrden" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
-
+									<a href="#" class="btn btn-primary" onclick="mostrarAlerta()">Guardar</a>
+									<a class="btn btn-danger eliminarOrden" data-bs-toggle="tooltip" data-bs-placement="bottom"><i class="bi bi-trash me-3"></i>Eliminar</a>
+									<div class="btn-group">
+										<a class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+											<i class="bi bi-download me-2"></i>Descargar
+										</a>
+										<ul class="dropdown-menu">
+											<li><a class="dropdown-item" href="#">PDF</a></li>
+											<li><a class="dropdown-item" href="#">Excel</a></li>
+											<li><a class="dropdown-item" href="#">CSV</a></li>
+										</ul>
+									</div>
 								   </div>
 							   </div>
 						   </div>
@@ -368,12 +377,13 @@
 								   <!-- address -->
 								   <div class="col-lg-4 col-md-4 col-12">
 									   <div class="mb-6">
-										   <h6>Detalles de usuario</h6>
-										   <p class="mb-1 lh-lg">
+										<h6 class="mb-0 me-2" ><strong>Detalles de usuario:</strong></h6>
+										   <p class="mb-1 lh-lg" style="margin-top: 6px;">
 											   Jesus Alvarado
 											   <br />
 											   a20211688@pucp.edu.pe
-
+											   <br />
+												947214757
 										   </p>
 										   <a href="#">Ver perfil</a>
 									   </div>
@@ -381,31 +391,29 @@
 								   <!-- address -->
 								   <div class="col-lg-4 col-md-4 col-12">
 									   <div class="mb-6">
-										   <h6>Dirección</h6>
-										   <p class="mb-1 lh-lg">
-												<div class="mb-3"><input type="text" class="form-control" placeholder="Urb. Taboadita MzD2"></div>
-
-										   </p>
-										   <h6>Distrito</h6>
-										   <p class="mb-1 lh-lg">
-										   <div class="mb-3"><input type="text" class="form-control" placeholder="Bellavista"></div>
-										   </p>
+										<h6 class="mb-0 me-2"><strong>Ubicación de envío:</strong></h6>
+										<div class="d-flex align-items-center mb-3" style="margin-top: 6px;">
+											<h6 class="mb-0 me-2">Dirección: </h6>
+											<input type="text" class="form-control flex-fill" value="Urb. Taboadita MzD2" style="color: #6c757d;">
+										</div>
+										<div class="d-flex align-items-center mb-3" style="margin-top: 25px;">
+											<h6 class="mb-0 me-2">Distrito: </h6>
+											<input type="text" class="form-control flex-fill" value="Bellavista" style="color: #6c757d; margin-left: 14px;">
+										</div>
 
 
 									   </div>
 								   </div>
 								   <!-- address -->
 								   <div class="col-lg-4 col-md-4 col-12">
-									   <div class="mb-6">
-										   <h6>Detalles de orden</h6>
-										   <p class="mb-1 lh-lg">
-											   ID:
-											   <span class="text-dark">7</span>
+									   <div class="mb-6" >
+										<h6 class="mb-0 me-2"><strong>Detalles de la orden:</strong></h6>
+										   <p class="mb-1 lh-lg" style="margin-top: 6px;">ID:<span class="text-dark">7</span>
 											   <br />
-											  	Día de entrega:
-										    	<div class="mb-3"><input type="text" class="form-control" placeholder="07-07-24"></div>
-
-
+											   <div class="d-flex align-items-center mb-3">
+												<h6 class="mb-0 me-2">Día de entrega: </h6>
+												<input type="text" class="form-control flex-fill" value="07-07-24" style="color: #6c757d; margin-left: 14px;">
+											</div>
 											   Total:
 											   <span class="text-dark">S/. 135.00</span>
 										   </p>
@@ -465,6 +473,18 @@
 										   <td>S/. 90.00</td>
 									   </tr>
 
+									   <tr>
+										<td class="border-bottom-0 pb-0"></td>
+										<td class="border-bottom-0 pb-0"></td>
+										<td colspan="1" class="fw-medium text-dark">
+											<!-- text -->
+											Sub-Total
+										</td>
+										<td class="fw-medium text-dark">
+											<!-- text -->
+											S/. 135.00
+										</td>
+										</tr>
 
 									   <tr>
 										   <td class="border-bottom-0 pb-0"></td>
@@ -532,6 +552,34 @@
 			   });
 		   });
 	   </script>
+
+		<!--POP UP PARA GUARDAR/EDITAR ORDEN-->
+		<script>
+			function mostrarAlerta() {
+				Swal.fire({
+					title: "¿Estás seguro de guardar los cambios realizados?",
+					showDenyButton: true,
+					showCancelButton: true,
+					confirmButtonText: "Guardar",
+					denyButtonText: "No guardar",
+					cancelButtonText: "Cancelar",
+					buttonsStyling: false,
+					customClass: {
+						confirmButton: 'btn btn-success mx-2',  // Botón verde
+						denyButton: 'btn btn-danger mx-2',      // Botón rojo
+						cancelButton: 'btn btn-secondary mx-2'  // Botón plomo
+					}
+				}).then((result) => {
+					if (result.isConfirmed) {
+						Swal.fire("¡Guardado!", "", "success");
+					} else if (result.isDenied) {
+						Swal.fire("No se guardaron los cambios", "", "info");
+					}
+				});
+			}
+		</script>
+
+
 	   </main>
 
 
