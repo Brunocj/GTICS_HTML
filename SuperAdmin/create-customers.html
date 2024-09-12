@@ -512,7 +512,7 @@
 										<div>
 											<div class="col-12 mt-3">
 												<div class="d-flex flex-column flex-md-row gap-2">
-													<button class="btn btn-primary" type="submit" onclick="showSuccessPopup()">Crear nuevo usuario</button>
+													<button class="btn btn-primary" type="submit" onclick="showSuccessPopup(event)">Crear nuevo usuario</button>
 													<button class="btn btn-secondary" type="submit">Cancel</button>
 												</div>
 											</div>
@@ -545,14 +545,17 @@
 <!-- SweetAlert2 JavaScript -->
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 <script>
-     function showSuccessPopup() {
+    function showSuccessPopup(event) {
+        event.preventDefault(); // Evita el envío del formulario
         Swal.fire({
             title: '¡Éxito!',
             text: 'Usuario creado correctamente',
             icon: 'success',
             confirmButtonColor: '#007bff',
             confirmButtonText: 'Aceptar',
-            
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: true
         });
     }
 </script>
