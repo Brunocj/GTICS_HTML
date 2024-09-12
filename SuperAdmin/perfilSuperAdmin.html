@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="Codescandy" name="author">
-    <title>Plantilla base para roles administrativos</title>
+    <title>Lista de usuarios finales</title>
     <!-- Favicon icon-->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
@@ -171,7 +171,7 @@
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column" id="sideNavbar">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link" href="#">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
                                     <span class="nav-link-text">DashBoard</span>
@@ -189,7 +189,7 @@
                         <!-- Desplegable de los Clientes-->
                         <li class="nav-item">
                             <a
-                                    class="nav-link collapsed"
+                                    class="nav-link"
                                     href="#"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#navCustomer"
@@ -197,23 +197,82 @@
                                     aria-controls="navCustomer"
                             >
                                 <div class="d-flex align-items-center">
-                                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                                    <span class="nav-link-icon active"><i class="bi bi-people"></i></span>
                                     <span class="nav-link-text">Usuarios</span>
-                                    <span class="badge bg-light-success text-dark-success ms-2">Vagos</span>
+                                    <span class="badge bg-light-success text-dark-success ms-2">New</span>
                                 </div>
                             </a>
-                            <div id="navCustomer" class="collapse" data-bs-parent="#sideNavbar">
+                            <div id="navCustomer" class="collapse  show " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="customers.html">Usuarios</a>
+                                    <li class="nav-item active" >
+                                        <a class="nav-link active" href="customers.html">Usuarios</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="create_customers.html">Crear Usuario</a>
+                                        <a class="nav-link " href="create-customers.html">Crear usuario</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="customers-edits.html">Editar Usuario</a>
+                                        <a class="nav-link " href="customers-edits.html">Editar Usuario</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <!-- Desplegable de los Administradores Zonales-->
+                        <li class="nav-item">
+                            <a
+                                    class="nav-link"
+                                    href="#"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navAdminZonal"
+                                    aria-expanded="false"
+                                    aria-controls="navAdminZonal"
+                            >
+                                <div class="d-flex align-items-center">
+                                    <span class="nav-link-icon active"><i class="bi bi-person-badge"></i></span>
+                                    <span class="nav-link-text">Administrador Zonal</span>
+                                </div>
+                            </a>
+                            <div id="navAdminZonal" class="collapse" data-bs-parent="#sideNavbar">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="admin-zonal-list.html">Administradores Zonales</a>
+                                    </li>
+                                    <!-- Nav item -->
+                                    <li class="nav-item">
+                                        <a class="nav-link " href="create-zonal-admin.html">Crear Administrador Zonal</a>
+                                    </li>
+                                    <!-- Nav item -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="admin-zonal-edit.html">Editar Administrador Zonal</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <!-- Desplegable de los Agentes-->
+                        <li class="nav-item">
+                            <a
+                                    class="nav-link"
+                                    href="#"
+                                    data-bs-toggle="collapse"
+                                    data-bs-target="#navAgent"
+                                    aria-expanded="false"
+                                    aria-controls="navAgent"
+                            >
+                                <div class="d-flex align-items-center">
+                                    <span class="nav-link-icon active"><i class="bi bi-person-circle"></i></span>
+                                    <span class="nav-link-text">Agente</span>
+                                </div>
+                            </a>
+                            <div id="navAgent" class="collapse" data-bs-parent="#sideNavbar">
+                                <ul class="nav flex-column">
+                                    <li class="nav-item active">
+                                        <a class="nav-link" href="agent-list.html">Agentes</a>
+                                    </li>
+                                    <!-- Nav item -->
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="agent-edit.html">Editar Agente</a>
                                     </li>
                                 </ul>
                             </div>
@@ -270,7 +329,7 @@
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">
+                            <a class="nav-link" href="#">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
                                     <span class="nav-link-text">DashBoard</span>
@@ -288,7 +347,7 @@
                         <!-- Desplegable de los Clientes-->
                         <li class="nav-item">
                             <a
-                                    class="nav-link collapsed"
+                                    class="nav-link active"
                                     href="#"
                                     data-bs-toggle="collapse"
                                     data-bs-target="#navCustomer"
@@ -296,23 +355,23 @@
                                     aria-controls="navCustomer"
                             >
                                 <div class="d-flex align-items-center">
-                                    <span class="nav-link-icon"><i class="bi bi-people"></i></span>
+                                    <span class="nav-link-icon active"><i class="bi bi-people"></i></span>
                                     <span class="nav-link-text">Usuarios</span>
-                                    <span class="badge bg-light-success text-dark-success ms-2">Vagos</span>
+                                    <span class="badge bg-light-success text-dark-success ms-2">New</span>
                                 </div>
                             </a>
-                            <div id="navCustomer" class="collapse" data-bs-parent="#sideNavbar">
+                            <div id="navCustomer" class="collapse  show " data-bs-parent="#sideNavbar">
                                 <ul class="nav flex-column">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="customers.html">Usuarios</a>
+                                    <li class="nav-item" >
+                                        <a class="nav-link active" href="customers.html">Usuarios</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="create_customers.html">Crear Usuario</a>
+                                        <a class="nav-link " href="create-customers.html">Crear usuario</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="customers-edits.html">Editar Usuario</a>
+                                        <a class="nav-link " href="customers-edits.html">Editar Usuario</a>
                                     </li>
                                 </ul>
                             </div>
