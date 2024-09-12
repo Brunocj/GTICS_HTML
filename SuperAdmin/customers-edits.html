@@ -518,7 +518,7 @@
 										<div>
 											<div class="col-12 mt-3">
 												<div class="d-flex flex-column flex-md-row gap-2">
-													<button class="btn btn-primary" type="submit" onclick="showSuccessMessage()">Actualizar</button>
+													<button class="btn btn-primary" type="submit" onclick="showSuccessPopup(event)">Actualizar</button>
 													<button class="btn btn-secondary" type="submit">Cancelar</button>
 												</div>
 											</div>
@@ -919,15 +919,19 @@
 </script>
 
 <script>
-	function showSuccessMessage() {
-		Swal.fire({
-			title: '¡Éxito!',
-			text: 'Cambios realizados correctamente',
-			icon: 'success',
-			confirmButtonColor: '#007bff', // Color del botón de confirmación
-			confirmButtonText: 'Aceptar'
-		});
-	}
+    function showSuccessPopup(event) {
+        event.preventDefault(); // Evita el envío del formulario
+        Swal.fire({
+            title: '¡Éxito!',
+            text: 'Usuario creado correctamente',
+            icon: 'success',
+            confirmButtonColor: '#007bff',
+            confirmButtonText: 'Aceptar',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: true
+        });
+    }
 </script>
 
 
