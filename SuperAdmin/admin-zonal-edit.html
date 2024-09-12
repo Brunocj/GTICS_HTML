@@ -433,7 +433,7 @@
                                 </nav>
                             </div>
                             <div>
-                                <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#delete">Delete</button>
+								<button type="button" class="btn btn-danger" onclick="confirmDelete()" data-bs-toggle="modal" data-bs-target="#delete">Eliminar</button>
                             </div>
                         </div>
                     </div>
@@ -546,7 +546,7 @@
                                         <div>
                                             <div class="col-12 mt-3">
                                                 <div class="d-flex flex-column flex-md-row gap-2">
-                                                    <button class="btn btn-primary" type="submit">Actualizar</button>
+													<button class="btn btn-primary" type="submit" onclick="showSuccessPopup(event)">Actualizar</button>
                                                     <button class="btn btn-secondary" type="submit">Cancel</button>
                                                 </div>
                                             </div>
@@ -915,6 +915,56 @@
 
 <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
 <script src="../assets/js/vendors/chart.js"></script>
+
+
+
+<!-- SweetAlert2 CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+<!-- SweetAlert2 JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+
+<script>
+	function confirmDelete() {
+		Swal.fire({
+			title: '¿Estás seguro?',
+			text: "Los cambios no serán reversibles",
+			icon: 'warning',
+			showCancelButton: true,
+			confirmButtonColor: '#28a745', // Color verde para el botón de eliminar
+			cancelButtonColor: '#dc3545', // Color rojo para el botón de cancelar
+			confirmButtonText: 'Eliminar',
+			cancelButtonText: 'Cancelar'
+		}).then((result) => {
+			if (result.isConfirmed) {
+				// Aquí puedes poner la lógica para eliminar el elemento
+				Swal.fire(
+					'¡Eliminado!',
+					'El elemento ha sido eliminado con éxito.',
+					'success'
+				);
+			}
+		});
+	}
+</script>
+
+<script>
+    function showSuccessPopup(event) {
+        event.preventDefault(); // Evita el envío del formulario
+        Swal.fire({
+            title: '¡Éxito!',
+            text: 'Usuario creado correctamente',
+            icon: 'success',
+            confirmButtonColor: '#007bff',
+            confirmButtonText: 'Aceptar',
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            allowEnterKey: true
+        });
+    }
+</script>
+
+
 </body>
 </html>
 
