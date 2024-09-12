@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta content="Codescandy" name="author">
-    <title>Plantilla base para roles administrativos</title>
+    <title>Crear nuevo administrador zonal</title>
     <!-- Favicon icon-->
     <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
@@ -171,7 +171,7 @@
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column" id="sideNavbar">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link active" href="#">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
                                     <span class="nav-link-text">DashBoard</span>
@@ -209,7 +209,7 @@
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="create-customers.html">Crear Usuario</a>
+                                        <a class="nav-link" href="create_customers.html">Crear Usuario</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
@@ -301,10 +301,10 @@
 
 
                         <!-- Opción de solicitudes de Agente-->
-                        <li class="nav-item ">
-                            <a class="nav-link active" href="agent-request.html">
+                        <li class="nav-item">
+                            <a class="nav-link" href="agent-request.html">
                                 <div class="d-flex align-items-center">
-                                    <span class="nav-link-icon "><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
+                                    <span class="nav-link-icon"><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
                                     <span class="nav-link-text">Solicitudes para Agente</span>
                                 </div>
                             </a>
@@ -330,7 +330,7 @@
                 <div class="navbar-vertical-content flex-grow-1" data-simplebar="">
                     <ul class="navbar-nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">
+                            <a class="nav-link active" href="#">
                                 <div class="d-flex align-items-center">
                                     <span class="nav-link-icon"><i class="bi bi-bar-chart"></i></span>  <!-- icono de gráfica -->
                                     <span class="nav-link-text">DashBoard</span>
@@ -368,7 +368,7 @@
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
-                                        <a class="nav-link" href="create-customers.html">Crear Usuario</a>
+                                        <a class="nav-link active" href="create_customers.html">Crear Usuario</a>
                                     </li>
                                     <!-- Nav item -->
                                     <li class="nav-item">
@@ -400,10 +400,10 @@
 
 
                         <!-- Opción de solicitudes de Agente-->
-                        <li class="nav-item active">
-                            <a class="nav-link active" href="agent-request.html">
+                        <li class="nav-item">
+                            <a class="nav-link" href="agent-request.html">
                                 <div class="d-flex align-items-center">
-                                    <span class="nav-link-icon active"><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
+                                    <span class="nav-link-icon"><i class="bi bi-envelope"></i></span> <!-- Icono de sobre -->
                                     <span class="nav-link-text">Solicitudes para Agente</span>
                                 </div>
                             </a>
@@ -418,192 +418,142 @@
         <!-- COONTENIDO DE LA PAGINA -->
         <main class="main-content-wrapper">
             <div class="container">
-                <!-- row -->
                 <div class="row mb-8">
                     <div class="col-md-12">
-                        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-4">
-                            <!-- pageheader -->
-                            <div>
-                                <h2>Lista de solicitudes para rol de Agente</h2>
-                                <!-- breacrumb -->
-                                <nav aria-label="breadcrumb">
-                                    <ol class="breadcrumb mb-0">
-                                        <li class="breadcrumb-item"><a href="#" class="text-inherit">Dashboard</a></li>
-                                        <li class="breadcrumb-item " aria-current="page">Solicitudes</li>
-                                    </ol>
-                                </nav>
-                            </div>
-                            <!-- button -->
-                            <div>
-                                <a href="create-agent.html" class="btn btn-primary">Crear un Agente</a>
-                            </div>
+                        <div>
+                            <h2>Crear administrador zonal</h2>
+                            <!-- breacrumb -->
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb mb-0">
+                                    <li class="breadcrumb-item"><a href="#" class="text-inherit">Dashboard</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page">Crear</li>
+                                </ol>
+                            </nav>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-12 col-12 mb-5">
-                        <!-- card -->
-                        <div class="card h-100 card-lg">
-                            <div class="px-6 py-6">
-                                <div class="row justify-content-between">
-                                    <div class="col-lg-4 col-md-6 col-12 mb-2 mb-md-0">
-                                        <!-- form -->
-                                        <form class="d-flex" role="search">
-                                            <input class="form-control" type="search" placeholder="Buscar" aria-label="Search" />
-                                        </form>
+                    <div class="col-12">
+                        <div class="card shadow border-0">
+                            <div class="card-body d-flex flex-column gap-8 p-7">
+                                <div class="d-flex flex-column flex-md-row align-items-center mb-4 file-input-wrapper gap-2">
+                                    <div>
+                                        <img class="image avatar avatar-lg rounded-3" src="../assets/images/docs/placeholder-img.jpg" alt="Image" />
                                     </div>
-                                    <!-- select option -->
-                                    <div class="col-xl-2 col-md-4 col-12">
-                                        <select class="form-select">
-                                            <option selected>Postulación</option>
-                                            <option value="directa">Directa</option>
-                                            <option value="coordinador">Por Coordinador</option>
-                                        </select>
+
+                                    <div class="file-upload btn btn-light ms-md-4">
+                                        <input type="file" class="file-input opacity-0" />
+                                        Upload Photo
                                     </div>
+
+                                    <span class="ms-2">JPG, GIF or PNG. 1MB Max.</span>
                                 </div>
-                            </div>
-                            <!-- card body -->
-                            <div class="card-body p-0">
-                                <!-- table -->
-                                <div class="table-responsive">
-                                    <table class="table table-centered table-hover mb-0 text-nowrap table-borderless table-with-checkbox">
-                                        <thead class="bg-light">
-                                        <tr>
-                                            <th>
-                                                <div class="form-check">
+                                <div class="d-flex flex-column gap-4">
+                                    <h3 class="mb-0 h6">Información del administrador zonal</h3>
+                                    <form class="row g-3 needs-validation" novalidate>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="DNIFinalUser" class="form-label">
+                                                    DNI:
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="DNIFinalUser" placeholder="DNI del usuario final" required />
+                                                <div class="invalid-feedback">Por favor ingrese el DNI del usuario</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="creatCustomerName" class="form-label">
+                                                    Nombres:
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="creatCustomerName" placeholder="Nombre del usuario final" required />
+                                                <div class="invalid-feedback">Por favor ingrese los nombres del usuario</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="creatFinalUserLastName" class="form-label">
+                                                    Apellidos:
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="creatFinalUserLastName" placeholder="Apellidos del usuario final" required />
+                                                <div class="invalid-feedback">Por favor ingrese los apellidos del usuario</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="phoneAdminZonal" class="form-label">
+                                                    Número telefónico:
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="text" class="form-control" id="phoneAdminZonal" placeholder="Teléfono" required />
+                                                <div class="invalid-feedback">Por favor ingrese el teléfono</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="creatFinalUserEmail" class="form-label">
+                                                    Email
+                                                    <span class="text-danger">*</span>
+                                                </label>
+                                                <input type="email" class="form-control" id="creatFinalUserEmail" placeholder="Correo Electrónico" required />
+                                                <div class="invalid-feedback">Por favor ingrese el correo electrónico del usuario</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- input -->
+                                                <label for="creatFinalUserDirection" class="form-label">Dirección</label>
+                                                <input type="text" class="form-control" id="creatFinalUserDirection" placeholder="Dirección" required />
+                                                <div class="invalid-feedback">Por favor ingrese la dirección del usuario</div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <!-- select -->
+                                                <label for="selectZone" class="form-label">Seleccione una zona</label>
+                                                <select class="form-select" id="selectZone" required>
+                                                    <option value="" selected disabled>Seleccione una opción</option>
+                                                    <option value="norte">Zona norte</option>
+                                                    <option value="sur">Zona sur</option>
+                                                    <option value="este">Zona este</option>
+                                                    <option value="oeste">Zona oeste</option>
+                                                </select>
+                                                <div class="invalid-feedback">Por favor seleccione una zona</div>
+                                            </div>
+                                        </div>
 
+
+                                        <div class="col-lg-6 col-12">
+                                            <label class="form-label" for="creatFinalUserDate">Fecha de nacimiento</label>
+                                            <input type="text" class="form-control flatpickr" id="creatFinalUserDate" placeholder="Fecha de nacimiento" required />
+                                            <div class="invalid-feedback">Por favor ingrese la fecha de nacimiento</div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <label class="form-label" for="passwordAdminZonal">Contraseña temporal</label>
+                                            <div class="input-group">
+                                                <input type="text" class="form-control flatpickr" id="passwordAdminZonal" placeholder="********" required />
+                                                <button class="btn btn-outline-secondary" type="button" id="generatePassword">Generar</button>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <div class="col-12 mt-3">
+                                                <div class="d-flex flex-column flex-md-row gap-2">
+                                                    <button class="btn btn-primary" type="submit">Crear</button>
+                                                    <button class="btn btn-secondary" type="submit">Cancel</button>
                                                 </div>
-                                            </th>
-                                            <th></th>
-                                            <th>Número de solicitud</th>
-                                            <th>Nombres</th>
-                                            <th>Apellidos</th>
-                                            <th>DNI</th>
-                                            <th>Teléfono</th>
-                                            <th>Postulación</th>
-                                            <th></th>
+                                            </div>
+                                        </div>
 
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="categoryOne" />
-                                                    <label class="form-check-label" for="categoryOne"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#!"><img src="../assets/images/icons/snacks.svg" alt="" class="icon-shape icon-sm" /></a>
-                                            </td>
-                                            <td>1</td>
-                                            <td>Ricardo</td>
-                                            <td>Calderón</td>
-                                            <td>71761570</td>
-                                            <td>952530495</td>
-                                            <td>
-                                                <span class="badge bg-light-primary text-dark-primary">Directa</span>
-                                            </td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="feather-icon icon-more-vertical fs-5"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-trash me-3"></i>
-                                                                Eliminar
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-check-circle me-3"></i> <!-- Icono de aceptar -->
-                                                                Aceptar
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-person me-3"></i> <!-- Icono de usuario individual -->
-                                                                Ver Usuario
-                                                            </a>
-                                                        </li>
-
-
-
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-
-                                        <tr>
-                                            <td>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="categoryFive" />
-                                                    <label class="form-check-label" for="categoryFive"></label>
-                                                </div>
-                                            </td>
-                                            <td>
-                                                <a href="#!"><img src="../assets/images/icons/toiletries.svg" alt="" class="icon-shape icon-sm" /></a>
-                                            </td>
-                                            <td>1</td>
-                                            <td>Ricardo</td>
-                                            <td>Calderón</td>
-                                            <td>71761570</td>
-                                            <td>952530495</td>
-                                            <td>
-                                                <span class="badge bg-light-danger text-dark-danger">Por coordinador</span></td>
-                                            <td>
-                                                <div class="dropdown">
-                                                    <a href="#" class="text-reset" data-bs-toggle="dropdown" aria-expanded="false">
-                                                        <i class="feather-icon icon-more-vertical fs-5"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu">
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-trash me-3"></i>
-                                                                Eliminar
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-check-circle me-3"></i> <!-- Icono de aceptar -->
-                                                                Aceptar
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-person me-3"></i> <!-- Icono de usuario individual -->
-                                                                Ver Usuario
-                                                            </a>
-                                                        </li>
-                                                        <li>
-                                                            <a class="dropdown-item" href="#">
-                                                                <i class="bi bi-person-badge me-3"></i> <!-- Icono de coordinador o líder -->
-                                                                Ver Coordinador
-                                                            </a>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                            </td>
-                                        </tr>
-
-                                        </tbody>
-                                    </table>
+                                    </form>
                                 </div>
-                            </div>
-                            <div class="border-top d-flex justify-content-between align-items-md-center px-6 py-6 flex-md-row flex-column gap-4">
-                                <span>Mostrando 1 a 8 de 12 entradas</span>
-                                <nav>
-                                    <ul class="pagination mb-0">
-                                        <li class="page-item disabled"><a class="page-link" href="#!">Previo</a></li>
-                                        <li class="page-item"><a class="page-link active" href="#!">1</a></li>
-                                        <li class="page-item"><a class="page-link" href="#!">2</a></li>
-                                        <li class="page-item"><a class="page-link" href="#!">3</a></li>
-                                        <li class="page-item"><a class="page-link" href="#!">siguiente</a></li>
-                                    </ul>
-                                </nav>
                             </div>
                         </div>
                     </div>
@@ -625,3 +575,9 @@
 <script src="../assets/js/vendors/chart.js"></script>
 </body>
 </html>
+
+
+
+
+
+

@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta content="Codescandy" name="author">
-	<title>Plantilla base para roles administrativos</title>
+	<title>Lista de usuarios finales</title>
 	<!-- Favicon icon-->
 	<link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
@@ -218,6 +218,65 @@
 								</ul>
 							</div>
 						</li>
+						<!-- Desplegable de los Administradores Zonales-->
+						<li class="nav-item">
+							<a
+									class="nav-link"
+									href="#"
+									data-bs-toggle="collapse"
+									data-bs-target="#navAdminZonal"
+									aria-expanded="false"
+									aria-controls="navAdminZonal"
+							>
+								<div class="d-flex align-items-center">
+									<span class="nav-link-icon active"><i class="bi bi-person-badge"></i></span>
+									<span class="nav-link-text">Administrador Zonal</span>
+								</div>
+							</a>
+							<div id="navAdminZonal" class="collapse" data-bs-parent="#sideNavbar">
+								<ul class="nav flex-column">
+									<li class="nav-item active">
+										<a class="nav-link" href="admin-zonal-list.html">Administradores Zonales</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link " href="create-zonal-admin.html">Crear Administrador Zonal</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="admin-zonal-edit.html">Editar Administrador Zonal</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<!-- Desplegable de los Agentes-->
+						<li class="nav-item">
+							<a
+									class="nav-link"
+									href="#"
+									data-bs-toggle="collapse"
+									data-bs-target="#navAgent"
+									aria-expanded="false"
+									aria-controls="navAgent"
+							>
+								<div class="d-flex align-items-center">
+									<span class="nav-link-icon active"><i class="bi bi-person-circle"></i></span>
+									<span class="nav-link-text">Agente</span>
+								</div>
+							</a>
+							<div id="navAgent" class="collapse" data-bs-parent="#sideNavbar">
+								<ul class="nav flex-column">
+									<li class="nav-item active">
+										<a class="nav-link" href="agent-list.html">Agentes</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="agent-edit.html">Editar Agente</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 
 						<!-- Desplegable de los Proveedores-->
 						<li class="nav-item">
@@ -384,8 +443,8 @@
 								<div class="row justify-content-between">
 									<div class="col-md-4 col-12">
 										<form class="d-flex" role="search">
-											<label for="searchCustomers" class="visually-hidden">Search Customers</label>
-											<input class="form-control" type="search" id="searchCustomers" placeholder="Search Customers" aria-label="Search" />
+											<label for="searchCustomers" class="visually-hidden">Buscar usuario finales</label>
+											<input class="form-control" type="search" id="searchCustomers" placeholder="Buscar usuario finales" aria-label="Search" />
 										</form>
 									</div>
 								</div>
@@ -405,7 +464,7 @@
 											<th>Correo electrónico</th>
 											<th>Fecha de registro</th>
 											<th>Teléfono</th>
-											<th>Spent</th>
+											<th>DNI</th>
 
 											<th></th>
 										</tr>
@@ -431,7 +490,7 @@
 
 											<td>17 May, 2023 at 3:18pm</td>
 											<td>-</td>
-											<td>$49.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -476,7 +535,7 @@
 
 											<td>27 April, 2023 at 2:47pm</td>
 											<td>435-239-6436</td>
-											<td>$490.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -520,7 +579,7 @@
 
 											<td>27 April, 2023 at 2:47pm</td>
 											<td>347-424-9526</td>
-											<td>$29.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -564,7 +623,7 @@
 
 											<td>27 April, 2023 at 2:47pm</td>
 											<td>-</td>
-											<td>$39.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -608,7 +667,7 @@
 
 											<td>18 March, 2023 at 2:47pm</td>
 											<td>304-471-8451</td>
-											<td>$213.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -652,7 +711,7 @@
 
 											<td>18 March, 2023 at 2:47pm</td>
 											<td>410-636-2682</td>
-											<td>$490.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -696,7 +755,7 @@
 
 											<td>18 March, 2023 at 2:47pm</td>
 											<td>845-294-6681</td>
-											<td>$39.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -740,7 +799,7 @@
 
 											<td>12 March, 2023 at 9:47am</td>
 											<td>313-887-8495</td>
-											<td>$19.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -784,7 +843,7 @@
 
 											<td>22 Feb, 2023 at 9:47pm</td>
 											<td>812-682-1588</td>
-											<td>$250.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -828,7 +887,7 @@
 
 											<td>22 Feb, 2023 at 9:47pm</td>
 											<td>812-682-1588</td>
-											<td>$250.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">
@@ -872,7 +931,7 @@
 
 											<td>22 Feb, 2023 at 9:47pm</td>
 											<td>336-396-0658</td>
-											<td>$159.00</td>
+											<td>71235456</td>
 
 											<td>
 												<div class="dropdown">

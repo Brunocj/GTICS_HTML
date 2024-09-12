@@ -218,6 +218,65 @@
 								</ul>
 							</div>
 						</li>
+						<!-- Desplegable de los Administradores Zonales-->
+						<li class="nav-item">
+							<a
+									class="nav-link"
+									href="#"
+									data-bs-toggle="collapse"
+									data-bs-target="#navAdminZonal"
+									aria-expanded="false"
+									aria-controls="navAdminZonal"
+							>
+								<div class="d-flex align-items-center">
+									<span class="nav-link-icon active"><i class="bi bi-person-badge"></i></span>
+									<span class="nav-link-text">Administrador Zonal</span>
+								</div>
+							</a>
+							<div id="navAdminZonal" class="collapse" data-bs-parent="#sideNavbar">
+								<ul class="nav flex-column">
+									<li class="nav-item active">
+										<a class="nav-link" href="admin-zonal-list.html">Administradores Zonales</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link " href="create-zonal-admin.html">Crear Administrador Zonal</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="admin-zonal-edit.html">Editar Administrador Zonal</a>
+									</li>
+								</ul>
+							</div>
+						</li>
+
+						<!-- Desplegable de los Agentes-->
+						<li class="nav-item">
+							<a
+									class="nav-link"
+									href="#"
+									data-bs-toggle="collapse"
+									data-bs-target="#navAgent"
+									aria-expanded="false"
+									aria-controls="navAgent"
+							>
+								<div class="d-flex align-items-center">
+									<span class="nav-link-icon active"><i class="bi bi-person-circle"></i></span>
+									<span class="nav-link-text">Agente</span>
+								</div>
+							</a>
+							<div id="navAgent" class="collapse" data-bs-parent="#sideNavbar">
+								<ul class="nav flex-column">
+									<li class="nav-item active">
+										<a class="nav-link" href="agent-list.html">Agentes</a>
+									</li>
+									<!-- Nav item -->
+									<li class="nav-item">
+										<a class="nav-link" href="agent-edit.html">Editar Agente</a>
+									</li>
+								</ul>
+							</div>
+						</li>
 
 						<!-- Desplegable de los Proveedores-->
 						<li class="nav-item">
@@ -396,49 +455,71 @@
 								</div>
 
 								<div class="d-flex flex-column gap-4">
-									<h4 class="mb-0 h6">Customer Information</h4>
+									<h4 class="mb-0 h6">Información del usuario final</h4>
 									<form class="row g-3 needs-validation" novalidate>
 										<div class="col-lg-6 col-12">
 											<div>
 												<!-- input -->
-												<label for="customerEditName" class="form-label">
-													Name
+												<label for="DNIFinalUser" class="form-label">
+													DNI:
 													<span class="text-danger">*</span>
 												</label>
-												<input type="text" class="form-control" id="customerEditName" placeholder="Customer Name" required />
-												<div class="invalid-feedback">Please enter category name</div>
+												<input type="text" class="form-control" id="DNIFinalUser" placeholder="DNI del usuario final" required />
+												<div class="invalid-feedback">Por favor ingrese el DNI del usuario</div>
 											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div>
 												<!-- input -->
-												<label for="customerEditEmail" class="form-label">
+												<label for="creatCustomerName" class="form-label">
+													Nombres:
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="creatCustomerName" placeholder="Nombre del usuario final" required />
+												<div class="invalid-feedback">Por favor ingrese los nombres del usuario</div>
+											</div>
+										</div>
+										<div class="col-lg-6 col-12">
+											<div>
+												<!-- input -->
+												<label for="creatFinalUserLastName" class="form-label">
+													Apellidos:
+													<span class="text-danger">*</span>
+												</label>
+												<input type="text" class="form-control" id="creatFinalUserLastName" placeholder="Apellidos del usuario final" required />
+												<div class="invalid-feedback">Por favor ingrese los apellidos del usuario</div>
+											</div>
+										</div>
+										<div class="col-lg-6 col-12">
+											<div>
+												<!-- input -->
+												<label for="creatFinalUserEmail" class="form-label">
 													Email
 													<span class="text-danger">*</span>
 												</label>
-												<input type="email" class="form-control" id="customerEditEmail" placeholder="Email Address" required />
-												<div class="invalid-feedback">Please enter email</div>
+												<input type="email" class="form-control" id="creatFinalUserEmail" placeholder="Correo Electrónico" required />
+												<div class="invalid-feedback">Por favor ingrese el correo electrónico del usuario</div>
 											</div>
 										</div>
 										<div class="col-lg-6 col-12">
 											<div>
 												<!-- input -->
-												<label for="customerEditPhone" class="form-label">Phone</label>
-												<input type="text" class="form-control" id="customerEditPhone" placeholder="Number" required />
-												<div class="invalid-feedback">Please enter phone</div>
+												<label for="creatFinalUserDirection" class="form-label">Dirección</label>
+												<input type="text" class="form-control" id="creatFinalUserDirection" placeholder="Dirección" required />
+												<div class="invalid-feedback">Por favor ingrese la dirección del usuario</div>
 											</div>
 										</div>
 
 										<div class="col-lg-6 col-12">
-											<label class="form-label" for="customerEditBirthdate">Birthday</label>
-											<input type="text" class="form-control flatpickr" id="customerEditBirthdate" placeholder="dd/mm/yyyy" required />
-											<div class="invalid-feedback">Please enter date</div>
+											<label class="form-label" for="creatFinalUserDate">Distrito</label>
+											<input type="text" class="form-control flatpickr" id="creatFinalUserDate" placeholder="Distrito" required />
+											<div class="invalid-feedback">Por favor ingrese un distrito</div>
 										</div>
 										<div>
 											<div class="col-12 mt-3">
 												<div class="d-flex flex-column flex-md-row gap-2">
-													<button class="btn btn-primary" type="submit">Create New Customer</button>
-													<button class="btn btn-secondary" type="submit">Cancel</button>
+													<button class="btn btn-primary" type="submit">Actualizar</button>
+													<button class="btn btn-secondary" type="submit">Cancelar</button>
 												</div>
 											</div>
 										</div>
@@ -451,15 +532,15 @@
 						<div class="card card-lg border-0">
 							<div class="card-body p-6 d-flex flex-column gap-6">
 								<div>
-									<h4 class="mb-0 h6">Customer Details</h4>
+									<h4 class="mb-0 h6">Detalles del usuario final</h4>
 								</div>
 								<div class="d-flex flex-column gap-3">
 									<div class="d-flex flex-row justify-content-between">
-										<span class="fw-medium text-dark">Created at</span>
-										<span class="fw-medium">8 month ago</span>
+										<span class="fw-medium text-dark">Creado en</span>
+										<span class="fw-medium">8 meses atrás</span>
 									</div>
 									<div class="d-flex flex-row justify-content-between">
-										<span class="fw-medium text-dark">Last modified at</span>
+										<span class="fw-medium text-dark">Última modificación en</span>
 										<span class="fw-medium">2 month ago</span>
 									</div>
 								</div>
