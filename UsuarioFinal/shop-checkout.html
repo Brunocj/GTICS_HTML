@@ -38,9 +38,8 @@
                      <!-- breadcrumb -->
                      <nav aria-label="breadcrumb">
                         <ol class="breadcrumb mb-0">
-                           <li class="breadcrumb-item"><a href="#!">Home</a></li>
-                           <li class="breadcrumb-item"><a href="#!">Shop</a></li>
-                           <li class="breadcrumb-item active" aria-current="page">Shop Checkout</li>
+                           <li class="breadcrumb-item"><a href="#!">Tienda</a></li>
+                           <li class="breadcrumb-item active" aria-current="page">Proceso de pago</li>
                         </ol>
                      </nav>
                   </div>
@@ -59,8 +58,9 @@
                            <!-- text -->
                            <h1 class="fw-bold mb-0">Proceso de pago</h1>
                            <p class="mb-0">
-                              Already have an account? Click here to
-                              <a href="#!">Sign in</a>
+                              
+                           ¿Ya tienes una cuenta? Haga clic aquí para iniciar sesión
+                              <a href="#!">Iniciar Sesión</a>
                               .
                            </p>
                         </div>
@@ -110,16 +110,24 @@
                                                 Av Universitaria 255,
                                                 <br />
 
+                                                C.P. 15001,
+                                                <br />
+
                                                 Perú, Lima, Pueblo Libre,
                                                 <br />
 
                                                 <abbr title="Phone">Tel: +51 963449953</abbr>
+
+                                                <br />
+                                                <abbr title="RUC">RUC: 20552103816</abbr>
                                              </address>
                                        
                                              <span class="text-danger">Dirección predeterminada</span>
                                              <!-- btn -->
                                              <div class="mt-4">
-                                                <a href="#" class="text-inherit">Editar</a>
+                                                <a href="#" class="text-inherit"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#editModal">Editar</a>
                                                 <a href="#" class="text-danger ms-3"
                                                    data-bs-toggle="modal"
                                                    data-bs-target="#deleteModal">Borrar</a>
@@ -140,15 +148,23 @@
 
                                                 Av Universitaria 255,
                                                 <br />
+                                          
 
+                                                C.P. 15001,
+                                                <br />
                                                 Perú, Lima, Pueblo Libre,
                                                 <br />
 
                                                 <abbr title="Phone">Tel: +51 963449953</abbr>
+
+                                                <br />
+                                                <abbr title="RUC">RUC: 20552103816</abbr>
                                              </address>
                                               <!-- btn -->
                                              <div class="mt-4">
-                                                <a href="#" class="text-inherit">Editar</a>
+                                                <a href="#" class="text-inherit"
+                                                   data-bs-toggle="modal"
+                                                   data-bs-target="#editModal">Editar</a>
                                                 <a href="#" class="text-danger ms-3"
                                                    data-bs-toggle="modal"
                                                    data-bs-target="#deleteModal">Borrar</a>
@@ -324,7 +340,7 @@
                                        <div class="card card-bordered shadow-none mb-2">
                                           <!-- card body -->
                                           <div class="card-body p-6">
-                                             <div class="d-flex mb-4">
+                                             <div class="d-flex">
                                                 <div class="form-check">
                                                    <!-- input -->
                                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="creditdebitcard" data-bs-toggle="modal" data-bs-target="#addCardModal"/>
@@ -337,65 +353,24 @@
                                                    <p class="mb-0 small">Transferencia de dinero segura utilizando su cuenta bancaria. Admitimos Mastercard , Visa y American-express.</p>
                                                    
                                                    <ul class="list-inline mb-0">
-                                                
-                                                      <li class="list-inline-item">
-                                                         <a href="#!"><img src="../assets/images/payment/amazonpay.svg" alt="" /></a>
-                                                      </li>
+                                             
                                                       <li class="list-inline-item">
                                                          <a href="#!"><img src="../assets/images/payment/american-express.svg" alt="" /></a>
                                                       </li>
                                                       <li class="list-inline-item">
                                                          <a href="#!"><img src="../assets/images/payment//mastercard.svg" alt="" /></a>
                                                       </li>
-                                                      <li class="list-inline-item">
-                                                         <a href="#!"><img src="../assets/images/payment/paypal.svg" alt="" /></a>
-                                                      </li>
+                        
                                                       <li class="list-inline-item">
                                                          <a href="#!"><img src="../assets/images/payment/visa.svg" alt="" /></a>
                                                       </li>
                                                    </ul>
                                                 </div>
-                                                
-                                                   
-                                                
+
+
+
                                              </div>
-                                             <div class="row g-2">
-                                                <div class="col-12">
-                                                   <!-- input -->
-                                                   <div class="mb-3">
-                                                      <label for="card-mask" class="form-label">Card Number</label>
-                                                      <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required />
-                                                   </div>
-                                                </div>
-                                                <div class="col-md-6 col-12">
-                                                   <!-- input -->
-                                                   <div class="mb-3 mb-lg-0">
-                                                      <label class="form-label" for="nameoncard">Name on card</label>
-                                                      <input type="text" class="form-control" placeholder="Enter name" id="nameoncard" />
-                                                   </div>
-                                                </div>
-                                                <div class="col-md-3 col-12">
-                                                   <!-- input -->
-                                                   <div class="mb-3 mb-lg-0 position-relative">
-                                                      <label class="form-label" for="expirydate">Expiry date</label>
-                                                      <input type="text" class="form-control" id="expirydate" placeholder="MM/YY" />
-                                                   </div>
-                                                </div>
-                                                <div class="col-md-3 col-12">
-                                                   <!-- input -->
-                                                   <div class="mb-3 mb-lg-0">
-                                                      <label for="digit-mask" class="form-label">
-                                                         CVV Code
-                                                         <i
-                                                            class="fe fe-help-circle ms-1"
-                                                            data-bs-toggle="tooltip"
-                                                            data-placement="top"
-                                                            title="A 3 - digit number, typically printed on the back of a card."></i>
-                                                      </label>
-                                                      <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required />
-                                                   </div>
-                                                </div>
-                                             </div>
+
                                           </div>
                                        </div>
                                  
@@ -445,11 +420,11 @@
                                  <li class="list-group-item px-4 py-3">
                                     <div class="row align-items-center">
                                        <div class="col-2 col-md-2">
-                                          <img src="../assets/images/products/product-img-1.jpg" alt="Ecommerce" class="img-fluid" />
+                                          <img src="../img_user/producto1.jpg" alt="Ecommerce" class="img-fluid" />
                                        </div>
                                        <div class="col-5 col-md-5">
-                                          <h6 class="mb-0">Haldiram's Sev Bhujia</h6>
-                                          <span><small class="text-muted">.98 / lb</small></span>
+                                          <h6 class="mb-0">Zapato Calvin Klein</h6>
+                          
                                        </div>
                                        <div class="col-2 col-md-2 text-center text-muted">
                                           <span>1</span>
@@ -463,11 +438,11 @@
                                  <li class="list-group-item px-4 py-3">
                                     <div class="row align-items-center">
                                        <div class="col-2 col-md-2">
-                                          <img src="../assets/images/products/product-img-2.jpg" alt="Ecommerce" class="img-fluid" />
+                                          <img src="../img_user/producto2.jpg" alt="Ecommerce" class="img-fluid" />
                                        </div>
                                        <div class="col-5 col-md-5">
-                                          <h6 class="mb-0">NutriChoice Digestive</h6>
-                                          <span><small class="text-muted">250g</small></span>
+                                          <h6 class="mb-0">Bolsa deportiva</h6>
+                                 
                                        </div>
                                        <div class="col-2 col-md-2 text-center text-muted">
                                           <span>1</span>
@@ -482,11 +457,11 @@
                                  <li class="list-group-item px-4 py-3">
                                     <div class="row align-items-center">
                                        <div class="col-2 col-md-2">
-                                          <img src="../assets/images/products/product-img-3.jpg" alt="Ecommerce" class="img-fluid" />
+                                          <img src="../img_user/producto3.jpg" alt="Ecommerce" class="img-fluid" />
                                        </div>
                                        <div class="col-5 col-md-5">
-                                          <h6 class="mb-0">Cadbury 5 Star Chocolate</h6>
-                                          <span><small class="text-muted">1 kg</small></span>
+                                          <h6 class="mb-0">Refrigeradora Hyandia</h6>
+                                       
                                        </div>
                                        <div class="col-2 col-md-2 text-center text-muted">
                                           <span>1</span>
@@ -501,10 +476,10 @@
                                  <li class="list-group-item px-4 py-3">
                                     <div class="row align-items-center">
                                        <div class="col-2 col-md-2">
-                                          <img src="../assets/images/products/product-img-4.jpg" alt="Ecommerce" class="img-fluid" />
+                                          <img src="../img_user/producto4.jpg" alt="Ecommerce" class="img-fluid" />
                                        </div>
                                        <div class="col-5 col-md-5">
-                                          <h6 class="mb-0">Onion Flavour Potato</h6>
+                                          <h6 class="mb-0">Pan carbonato</h6>
                                           <span><small class="text-muted">250g</small></span>
                                        </div>
                                        <div class="col-2 col-md-2 text-center text-muted">
@@ -553,27 +528,27 @@
          <div class="modal-dialog">
             <div class="modal-content">
                <div class="modal-header">
-                  <h5 class="modal-title" id="deleteModalLabel">Delete address</h5>
+                  <h5 class="modal-title" id="deleteModalLabel">Borrar dirección</h5>
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
-                  <h6>Are you sure you want to delete this address?</h6>
+                  <h6>¿Estás seguro que quieres eliminar esta dirección?</h6>
                   <p class="mb-6">
-                     Jitu Chauhan
+                     Adrian Lopez
                      <br />
 
-                     4450 North Avenue Oakland,
+                     Av Universitaria 255,
                      <br />
 
-                     Nebraska, United States,
+                     Perú, Lima, Pueblo Libre,
                      <br />
 
-                     402-776-1106
+                     Tel: +51 963449953
                   </p>
                </div>
                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-gray-400" data-bs-dismiss="modal">Cancel</button>
-                  <button type="button" class="btn btn-danger">Delete</button>
+                  <button type="button" class="btn btn-outline-gray-400" data-bs-dismiss="modal">Cancelar </button>
+                  <button type="button" class="btn btn-danger">Borrar</button>
                </div>
             </div>
          </div>
@@ -603,9 +578,9 @@
                         <!-- button -->
                         <select class="form-select">
                            <option value="IN">Perú</option>
-                           <option value="UK">🇬🇧 United Kingdom</option>
-                           <option value="US">🇺🇸 United States</option>
-                           <option value="AE">🇦🇪 United Arab Emirates</option>
+                           <option value="UK">Brasil</option>
+                           <option value="US">Chile</option>
+                           <option value="AE">Canadá</option>
                         </select>
                         
                      </div>
@@ -637,10 +612,10 @@
                         <!-- select -->
                         <select class="form-select">
                            <option value="" selected disabled hidden>Provincia</option>
-                           <option value="IN">🇮🇳 India</option>
-                           <option value="UK">🇬🇧 United Kingdom</option>
-                           <option value="US">🇺🇸 United States</option>
-                           <option value="AE">🇦🇪 United Arab Emirates</option>
+                           <option >Lima</option>
+                           <option >Cajamarca</option>
+                           <option >La Libertad</option>
+                           <option >Junin</option>
                         </select>
                      </div>
 
@@ -649,10 +624,10 @@
                         <!-- select -->
                         <select class="form-select">
                            <option value="" selected disabled hidden>Distrito</option>
-                           <option value="IN">🇮🇳 India</option>
-                           <option value="UK">🇬🇧 United Kingdom</option>
-                           <option value="US">🇺🇸 United States</option>
-                           <option value="AE">🇦🇪 United Arab Emirates</option>
+                           <option >Pueblo Libre</option>
+                           <option >San Miguel</option>
+                           <option >Lince</option>
+                           <option >La Victoria</option>
                         </select>
                      </div>
 
@@ -701,16 +676,16 @@
             </div>
          </div>
          <!-- Modal -->
-      <div class="modal fade" id="addCardModal" tabindex="-1" aria-labelledby="addCardModalLabel" aria-hidden="true">
-         <div class="modal-dialog modal-lg modal-dialog-centered"" >
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
             <div class="modal-content">
                <!-- modal body -->
                <div class="modal-body p-6">
                   <div class="d-flex justify-content-between mb-5">
                      <!-- heading -->
                      <div>
-                        <h5 class="h6 mb-1" id="addAddressModalLabel">Añadir nueva dirección</h5>
-                        <p class="small mb-0">Añade una nueva dirección para la entrega del pedido.</p>
+                        <h5 class="h6 mb-1" id="editModalLabel">Edita la dirección</h5>
+                        <p class="small mb-0">Edita la dirección para la entrega del pedido.</p>
                      </div>
                      <div>
                         <!-- button -->
@@ -718,43 +693,216 @@
                      </div>
                   </div>
                   <!-- row -->
-                  <div class="row g-2">
+                  <div class="row g-3">
                      <div class="col-12">
-                           <!-- input -->
-                           <div class="mb-3">
-                              <label for="card-mask" class="form-label">Card Number</label>
-                              <input type="text" class="form-control" id="card-mask" placeholder="xxxx-xxxx-xxxx-xxxx" required />
-                           </div>
+                        <label for="CountryName" class="form-label">País/región</label>
+                        <!-- button -->
+                        <select class="form-select">
+                           <option value="IN" selected>Perú</option>
+                           <option value="UK">Brasil</option>
+                           <option value="US">Chile</option>
+                           <option value="AE">Canadá</option>
+                        </select>
+                        
+                     </div>
+                     <!-- col -->
+                     <div class="col-12">
+                        <label for="ContactName" class="form-label">Información personal</label>
+                        <input type="text" class="form-control" placeholder="Nombre del contacto*" aria-label="Nombre del contacto" required="" value="Adrian Lopez"/>
+                     </div>
+                     <!-- col -->
+                     <!-- Número de teléfono -->
+                     <div class="col-12">
+                        <div class="input-group">
+                           <input style="width: 15%;" type="text" class="form-control" id="countryCode" placeholder="Código de país" value="+51"  aria-label="" />
+                           <input style="width: 85%;" type="text" class="form-control" id="phoneNumber" placeholder="Número de teléfono" aria-label="Número de teléfono" value="963447234" />
                         </div>
-                        <div class="col-md-6 col-12">
-                           <!-- input -->
-                           <div class="mb-3 mb-lg-0">
-                              <label class="form-label" for="nameoncard">Name on card</label>
-                              <input type="text" class="form-control" placeholder="Enter name" id="nameoncard" />
-                           </div>
+                     </div>
+                     
+                     <!-- col -->
+                     <div class="col-12">
+                        <label for="direction" class="form-label">Dirección </label>
+                        <input type="text" class="form-control" placeholder="Dirección, apartado posta, etc." aria-label="Dirección" required="" value="Av Universitaria 255"/>
+                     </div>
+                     <!-- col -->
+                     <div class="col-12">
+                        <input type="text" class="form-control" placeholder="Apartamento, suite, unidad, etc.(opcional)" aria-label="Apartamento" required="" />
+                     </div>
+                     <!-- col -->
+                     <div class="col-12">
+                        <!-- select -->
+                        <select class="form-select">
+                           <option value="" selected disabled hidden>Provincia</option>
+                           <option selected >Lima</option>
+                           <option >Cajamarca</option>
+                           <option >La Libertad</option>
+                           <option >Junin</option>
+                        </select>
+                     </div>
+
+                     <!-- col -->
+                     <div class="col-12">
+                        <!-- select -->
+                        <select class="form-select">
+                           <option value="" selected disabled hidden>Distrito</option>
+                           <option >Pueblo Libre</option>
+                           <option >San Miguel</option>
+                           <option >Lince</option>
+                           <option selected >La Victoria</option>
+                        </select>
+                     </div>
+
+                     <div class="col-12">
+                        <!-- button -->
+                        <input type="text" class="form-control" placeholder="Código postal*" value="15001"/>
+                     </div>
+
+                     <div class="col-12"></div>
+                        <!-- button -->
+                        <label for="Etiquetas" class="form-label"> Etiquetas </label>
+                        <div class="d-flex" style="margin-bottom: 20px; margin-top: -3.5px;">
+                           <a style="flex: 1; margin-right: 5px;" class="btn btn-light" href="#" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Casa">
+                               <i class="bi bi-house-door"></i> Casa
+                           </a>
+                           <a style="flex: 1; margin-right: 5px;" class="btn btn-light" href="#" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Oficina">
+                               <i class="bi bi-briefcase"></i> Oficina
+                           </a>
+                           <a style="flex: 1;" class="btn btn-light" href="#" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Agregar">
+                               <i class="bi bi-plus"></i> Agregar
+                           </a>
+                       </div>
+                     </div>
+                     
+                     <div class="col-12">
+                        <label for="aduanas" class="form-label">Información para aduanas </label>
+                        <!-- button -->
+                        <input type="text" class="form-control" placeholder="Número de RUC*" value="20552103816"/>
+                        <span class="text-danger">Opcional para importaciones personales.</span>
+                     </div>
+               
+                     <div class="col-12" style="margin-bottom: 10px;">
+                        <div class="form-check">
+                           <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" checked />
+                           <!-- label -->
+                           <label class="form-check-label" for="flexCheckDefault" >Establecer como dirección de envío predeterminada</label>
                         </div>
-                        <div class="col-md-3 col-12">
-                           <!-- input -->
-                           <div class="mb-3 mb-lg-0 position-relative">
-                              <label class="form-label" for="expirydate">Expiry date</label>
-                              <input type="text" class="form-control" id="expirydate" placeholder="MM/YY" />
-                           </div>
-                        </div>
-                        <div class="col-md-3 col-12">
-                           <!-- input -->
-                           <div class="mb-3 mb-lg-0">
-                              <label for="digit-mask" class="form-label">
-                                 CVV Code
-                                 <i
-                                    class="fe fe-help-circle ms-1"
-                                    data-bs-toggle="tooltip"
-                                    data-placement="top"
-                                    title="A 3 - digit number, typically printed on the back of a card."></i>
-                              </label>
-                              <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required />
-                           </div>
-                        </div>
+                     </div>
+                     <!-- button -->
+                     <div class="col-12 text-end">
+                        <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Cancelar</button>
+                        <button class="btn btn-primary" type="button">Guardar dirección</button>
+                     </div>
                   </div>
+               </div>
+            </div>
+         </div>
+      
+         <!-- Modal -->
+      <div class="modal fade" id="addCardModal" tabindex="-1" aria-labelledby="addCardModalLabel" aria-hidden="true">
+         <div class="modal-dialog modal-lg modal-dialog-centered"" >
+            <div class="modal-content">
+              
+               <!-- modal body -->
+               <div class="modal-body p-6">
+                  <div class="d-flex justify-content-between mb-5">
+                     <!-- heading -->
+                     <div>
+                        <h5 class="h6 mb-1" id="addAddressModalLabel">Añadir una nueva tarjeta</h5>
+                        <p class="small mb-0 d-inline-block me-2">Lista de tarjetas válidas:</p>
+                                       <!-- Lista de tarjetas -->
+                     <ul class="list-inline mb-0 d-inline-block">
+                        <li class="list-inline-item">
+                           <a href="#!"><img src="../assets/images/payment/american-express.svg" alt="" /></a>
+                        </li>
+                        <li class="list-inline-item">
+                           <a href="#!"><img src="../assets/images/payment/mastercard.svg" alt="" /></a>
+                        </li>
+                        <li class="list-inline-item">
+                           <a href="#!"><img src="../assets/images/payment/visa.svg" alt="" /></a>
+                        </li>
+                     </ul>
+                     </div>
+                     <div>
+                        <!-- button -->
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                     </div>
+                  </div>
+                  <!-- row -->
+                 
+                        
+                        <div class="row g-2">
+                           <div class="col-md-6 col-12">
+                              <!-- Input: Número de tarjeta -->
+                              <div class="mb-3">
+                                 <label for="card-number" class="form-label">Número de tarjeta</label>
+                                 <input type="text" class="form-control" id="card-number2" placeholder="xxxx-xxxx-xxxx-xxxx" required maxlength="19" inputmode="numeric"  />
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-12">
+                              <!-- Input: Nombre del titular -->
+                              <div class="mb-3">
+                                 <label class="form-label" for="nameoncard">Nombre del titular de la tarjeta</label>
+                                 <input type="text" class="form-control" placeholder="Ingrese nombre" id="nameoncard" />
+                              </div>
+                           </div>
+                           <div class="col-md-6 col-6">
+                              <!-- Input: Mes de expiración -->
+                              <div class="mb-3 mb-lg-0">
+                                 <label class="form-label" for="expiry-month">Fecha de expiración</label>
+                                 <div class="d-flex">
+                                             <!-- select -->
+                                 <select class="form-select">
+                                    <option value="" selected disabled hidden>MM</option>
+                                    <option >01</option>
+                                    <option >02</option>
+                                    <option >03</option>
+                                    <option >04</option>
+                                    <option >05</option>
+                                    <option >06</option>
+                                    <option >07</option>
+                                    <option >08</option>
+                                 </select>
+                                    <span class="mx-1">/</span>
+                                    <select class="form-select">
+                                       <option value="" selected disabled hidden>YY</option>
+                                       <option >2024</option>
+                                       <option >2025</option>
+                                       <option >2026</option>
+                                       <option >2027</option>
+                                       <option >2028</option>
+                                       <option >2029</option>
+                                       <option >2030</option>
+                                       <option >2031</option>
+                                    </select>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col">
+                              <!-- Input: CVV -->
+                              <div class="mb-3 mb-lg-0">
+                                 <label for="digit-mask" class="form-label">
+                                    Código CVV
+                                    <i class="fe fe-help-circle ms-1" data-bs-toggle="tooltip" data-placement="top" title="Un número de 3 dígitos, normalmente impreso en el reverso de la tarjeta."></i>
+                                 </label>
+                                 <input type="password" class="form-control" name="digit-mask" id="digit-mask" placeholder="xxx" maxlength="3" inputmode="numeric" required />
+                              </div>
+                           </div>
+                           <div class="col-12 mt-3">
+                              <!-- Guardar datos de la tarjeta -->
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" id="save-card" />
+                                 <label class="form-check-label" for="save-card">Guardar datos de la tarjeta</label>
+                              </div>
+                           </div>
+                           <div class="col-12 text-center">
+                              <button class="btn btn-primary w-30" type="button">Guardar y confirmar</button>
+                           </div>
+                           
+                        </div>
+                     
+            
+
+
                </div>
             </div>
          </div>
@@ -763,6 +911,21 @@
 
       <!-- Footer -->
       
+                  <!-- JavaScript para el formateo automático del número de tarjeta -->
+                  <script>
+                     document.getElementById('card-number2').addEventListener('input', function (e) {
+                        let value = e.target.value.replace(/\D/g, ''); // Elimina cualquier caracter que no sea un número
+                        let formattedValue = '';
+
+                        // Agrupa los números en bloques de 4 separados por guiones
+                        for (let i = 0; i < value.length; i += 4) {
+                           if (i > 0) formattedValue += '-';
+                           formattedValue += value.substr(i, 4);
+                        }
+
+                        e.target.value = formattedValue;
+                     });
+                  </script>
       <!-- Javascript-->
       <script src="../assets/libs/flatpickr/dist/flatpickr.min.js"></script>
       <!-- Libs JS -->
