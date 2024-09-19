@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta content="Codescandy" name="author">
-        <title>Foro</title>
+        <title>Chat Soporte</title>
         <!-- Favicon icon-->
         <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon/favicon.ico">
 
@@ -18,12 +18,10 @@
 
         <!-- Theme CSS -->
         <link rel="stylesheet" href="../assets/css/theme.min.css">
+<!-- fontawesome -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
         <style>
-            .form-control::placeholder {
-                font-size: 12px; /* Cambia el tamaño del texto del placeholder */
-            }
             .info-box {
                 display: flex;
                 padding: 20px;
@@ -51,6 +49,21 @@
             .table tbody td {
                 color: black; /* Texto negro para el cuerpo de la tabla */
             }
+
+            .typing-indicator {
+    font-size: 0.9em;
+    color: #a2aab7;
+    margin-left: 15px;
+}
+
+.card-footer {
+    border-top: 1px solid #e0e0e0;
+}
+
+.input-group {
+    width: 100%;
+}
+
         </style>
 
     </head>
@@ -686,352 +699,77 @@
 
             <script src="../assets/js/vendors/validation.js"></script>
 
+
             <main>
-                <!-- section-->
-
-                <!-- section -->
-                <div class="mt-8 mb-lg-14 mb-8">
-                    <!-- container -->
-                    <div class="container">
-                        <!-- row -->
-                        <div class="row gx-10">
-                            <!-- col -->
-                            <aside class="col-lg-3 col-md-4 mb-6 mb-md-0">
-                                <div class="offcanvas offcanvas-start offcanvas-collapse w-md-50" tabindex="-1" id="offcanvasCategory" aria-labelledby="offcanvasCategoryLabel">
-                                    <div class="offcanvas-header d-lg-none">
-                                        <h5 class="offcanvas-title" id="offcanvasCategoryLabel">Filter</h5>
-                                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                                    </div>
-
-                                    <div class="offcanvas-body ps-lg-2 pt-lg-0">
-                                        <form action="/ruta/backend" method="GET"> <!-- Cambia la acción a la ruta de tu backend -->
-                                            <!-- Búsqueda -->
-                                            <div class="mb-8">
-                                                <h5 class="mb-3">Búsqueda</h5>
-                                                <div class="my-4">
-                                                    <input type="search" name="search" class="form-control" placeholder="Filtrar por nombre, código, proveedores del producto" />
-                                                </div>
-                                            </div>
-
-                                            <!-- Rating -->
-                                            <div class="mb-8">
-                                                <h5 class="mb-3">Rating</h5>
-                                                <div>
-                                                    <!-- form check -->
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" name="rating[]" value="5" id="ratingFive" />
-                                                        <label class="form-check-label" for="ratingFive">
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" name="rating[]" value="4" id="ratingFour" checked />
-                                                        <label class="form-check-label" for="ratingFour">
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" name="rating[]" value="3" id="ratingThree" />
-                                                        <label class="form-check-label" for="ratingThree">
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" name="rating[]" value="2" id="ratingTwo" />
-                                                        <label class="form-check-label" for="ratingTwo">
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                        </label>
-                                                    </div>
-                                                    <div class="form-check mb-2">
-                                                        <input class="form-check-input" type="checkbox" name="rating[]" value="1" id="ratingOne" />
-                                                        <label class="form-check-label" for="ratingOne">
-                                                            <i class="bi bi-star-fill text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                            <i class="bi bi-star text-warning"></i>
-                                                        </label>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <!-- Botón para enviar la información -->
-                                            <a href="#" class="btn btn-outline-gray-400 mb-2" style="margin-top: -25px" onclick="document.querySelector('form').submit();">Filtrar</a>
-                                        </form>
-
-                                    </div>
-                                    <div style="margin-top: -20px;margin-left: 8px" >
-                                    <hr>
-                                    <a href="reviuw.html" class="btn btn-primary" >Redactar reseña</a>
-                                    </div>
-                                </div>
-                            </aside>
-                            <section class="col-lg-9 col-md-12">
-
-
-                                <!-- ACA PONER LOS REVIEWS -->
-
-                                <div class="my-1" >
-                                    <!-- col -->
-                                    <div class="col-md-12">
-                                        <div class="mb-10">
-                                            <div class="d-flex justify-content-between align-items-center mb-8">
-                                                <div>
-                                                    <!-- heading -->
-                                                    <h4>Reseñas</h4>
-                                                </div>
-
-                                                <!-- Agrupando ambos selectores en un solo contenedor -->
-                                                <div class="d-flex mt-2 mt-lg-0">
-                                                    <!-- Selector de "Show" -->
-                                                    <div class="me-2">
-                                                        <select class="form-select">
-                                                            <option selected>Mostrar: 5</option>
-                                                            <option value="10">Mostrar: 10</option>
-                                                            <option value="20">Mostrar: 15</option>
-
-                                                        </select>
-                                                    </div>
-
-                                                    <!-- Selector de "Top Reviews" -->
-                                                    <div>
-                                                        <select class="form-select">
-                                                            <option selected>Más valoradas</option>
-                                                            <option value="Most Recent">Más recientes</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex border-bottom pb-6 mb-6">
-                                                <!-- img -->
-                                                <img src="../assets/images/avatar/avatar-10.jpg" alt="" class="rounded-circle avatar-lg" />
-                                                <div class="ms-5">
-                                                    <h6 class="mb-1">Shankar Subbaraman</h6>
-                                                    <!-- select option -->
-                                                    <!-- content -->
-                                                    <p class="small">
-                                                        <span class="text-muted">30 Diciembre 2022</span>
-                                                        <span class="text-primary ms-3 fw-bold">Compra Verificada</span>
-                                                    </p>
-                                                    <!-- rating -->
-                                                    <div class="mb-2">
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <span class="ms-3 text-dark fw-bold">Es necesario verificar el peso en el punto de entrega</span>
-                                                    </div>
-                                                    <!-- text-->
-                                                    <p>
-                                                        La calidad del producto es buena, pero el peso parecía ser menor de 1kg. Como se envía en un paquete abierto, existe la posibilidad de que se pierda parte del contenido durante el envío. FreshCart envía las verduras y frutas en bolsas de plástico selladas con código de barras en el peso, etc.
-                                                    </p>
-                                                    <div>
-                                                        <div class="border icon-shape icon-lg border-2">
-                                                            <!-- img -->
-                                                            <img src="../assets/images/products/product-img-1.jpg" alt="" class="img-fluid" />
-                                                        </div>
-                                                        <div class="border icon-shape icon-lg border-2 ms-1">
-                                                            <!-- img -->
-                                                            <img src="../assets/images/products/product-img-2.jpg" alt="" class="img-fluid" />
-                                                        </div>
-                                                        <div class="border icon-shape icon-lg border-2 ms-1">
-                                                            <!-- img -->
-                                                            <img src="../assets/images/products/product-img-3.jpg" alt="" class="img-fluid" />
-                                                        </div>
-                                                    </div>
-                                                    <!-- icon -->
-                                                    <div class="d-flex justify-content-end mt-4">
-                                                        <a href="#" class="text-muted">
-                                                            <i class="feather-icon icon-thumbs-up me-1"></i>
-                                                            Útil
-                                                        </a>
-                                                        <a href="#" class="text-muted ms-4">
-                                                            <i class="feather-icon icon-flag me-2"></i>
-                                                            Reportar abuso
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex border-bottom pb-6 mb-6 pt-4">
-                                                <!-- img -->
-                                                <img src="../assets/images/avatar/avatar-12.jpg" alt="" class="rounded-circle avatar-lg" />
-                                                <div class="ms-5">
-                                                    <h6 class="mb-1">Robert Thomas</h6>
-                                                    <!-- content -->
-                                                    <p class="small">
-                                                        <span class="text-muted">29 Diciembre 2022</span>
-                                                        <span class="text-primary ms-3 fw-bold">Compra Verificada</span>
-                                                    </p>
-                                                    <!-- rating -->
-                                                    <div class="mb-2">
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star text-warning"></i>
-                                                        <span class="ms-3 text-dark fw-bold">Es necesario verificar el peso en el punto de entrega</span>
-                                                    </div>
-
-                                                    <p>
-                                                        La calidad del producto es buena, pero el peso parecía ser menor de 1kg. Como se envía en un paquete abierto, existe la posibilidad de pérdida en el camino. FreshCart envía las verduras y frutas en bolsas de plástico selladas y con código de barras para el peso, etc.
-                                                    </p>
-                                                    <!-- icon -->
-                                                    <div class="d-flex justify-content-end mt-4">
-                                                        <a href="#" class="text-muted">
-                                                            <i class="feather-icon icon-thumbs-up me-1"></i>
-                                                            Útil
-                                                        </a>
-                                                        <a href="#" class="text-muted ms-4">
-                                                            <i class="feather-icon icon-flag me-2"></i>
-                                                            Reportar abuso
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex border-bottom pb-6 mb-6 pt-4">
-                                                <!-- img -->
-                                                <img src="../assets/images/avatar/avatar-9.jpg" alt="" class="rounded-circle avatar-lg" />
-                                                <div class="ms-5">
-                                                    <h6 class="mb-1">Barbara Tay</h6>
-                                                    <!-- content -->
-                                                    <p class="small">
-                                                        <span class="text-muted">28 Diciembre 2022</span>
-                                                        <span class="text-danger ms-3 fw-bold">Compra No Verificada</span>
-                                                    </p>
-                                                    <!-- rating -->
-                                                    <div class="mb-2">
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star text-warning"></i>
-                                                        <span class="ms-3 text-dark fw-bold">Es necesario verificar el peso en el punto de entrega</span>
-                                                    </div>
-
-                                                    <p>
-                                                        Cada vez que pedí de Fresh recibí plátanos verde amarillentos como los quería, así que vale la pena. Rara vez llegan demasiado maduros.
-                                                    </p>
-                                                    <!-- icon -->
-                                                    <div class="d-flex justify-content-end mt-4">
-                                                        <a href="#" class="text-muted">
-                                                            <i class="feather-icon icon-thumbs-up me-1"></i>
-                                                            Útil
-                                                        </a>
-                                                        <a href="#" class="text-muted ms-4">
-                                                            <i class="feather-icon icon-flag me-2"></i>
-                                                            Reportar abuso
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div class="d-flex border-bottom pb-6 mb-6 pt-4">
-                                                <!-- img -->
-                                                <img src="../assets/images/avatar/avatar-8.jpg" alt="" class="rounded-circle avatar-lg" />
-                                                <div class="ms-5 flex-grow-1">
-                                                    <h6 class="mb-1">Sandra Langevin</h6>
-                                                    <!-- content -->
-                                                    <p class="small">
-                                                        <span class="text-muted">8 Diciembre 2022</span>
-                                                        <span class="text-danger ms-3 fw-bold">Compra No Verificada</span>
-                                                    </p>
-                                                    <!-- rating -->
-                                                    <div class="mb-2">
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star-fill text-warning"></i>
-                                                        <i class="bi bi-star text-warning"></i>
-                                                        <span class="ms-3 text-dark fw-bold">Gran producto</span>
-                                                    </div>
-
-                                                    <p>
-                                                        Gran producto y empaque. La entrega podría ser más rápida.
-                                                    </p>
-                                                    <!-- icon -->
-                                                    <div class="d-flex justify-content-end mt-4">
-                                                        <a href="#" class="text-muted">
-                                                            <i class="feather-icon icon-thumbs-up me-1"></i>
-                                                            Útil
-                                                        </a>
-                                                        <a href="#" class="text-muted ms-4">
-                                                            <i class="feather-icon icon-flag me-2"></i>
-                                                            Reportar abuso
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-
+                <!-- nav
+               bar vertical (para pc)-->
+                <!-- navbar -->
+                <div class="container">
+                    <section>
+                        <div class="container py-5">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-md-10 col-lg-8 col-xl-10 col-sm-11">
+                                    <div class="card" id="chat2">
+                                        <div class="card-header d-flex justify-content-between align-items-center p-3">
+                                            <h5 class="mb-0">ChatBot</h5>
                                         </div>
-
+                                        <div class="card-body" data-mdb-perfect-scrollbar-init style="position: relative; height: 400px">
+                                            <div class="d-flex flex-row justify-content-start">
+                                                <img src="../UsuarioFinal/carrito.png" alt="avatar 1" style="width: 45px; height: 100%;">
+                                                <div>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3 bg-body-tertiary">¡Hola! Soy Carricardo, tu asistente de compras virtual dispuesto a resolver cualquier duda que tengas.</p>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3 bg-body-tertiary">Te presento algunas de mis funciones:</p>
+                                                    <p class="small p-2 ms-3 mb-1 rounded-3 bg-body-tertiary">
+                                                        • Puedo validar tu información para tu próxima compra.<br>
+                                                        • Puedo ayudarte a generar una orden de compra.<br>
+                                                        • Puedo brindarte el libro de reclamaciones virtual.
+                                                    </p>
+                                                    <p class="small ms-3 mb-3 rounded-3 text-muted">¿En qué quisieras que te ayude?</p>
+                                                    <p class="small ms-3 mb-3 rounded-3 text-muted">15:58</p>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="card-footer text-muted d-flex justify-content-start align-items-center p-3">
+                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava4-bg.webp" alt="avatar 3" style="width: 40px; height: 100%;">
+                                            <input type="file" id="fileInput" accept="image/*" style="display: none;">
+                                            <label for="fileInput" class="ms-1 text-muted" style="cursor: pointer;">
+                                                <i class="fas fa-paperclip"></i>
+                                            </label>
+                                            <input type="text" class="form-control form-control-lg ms-2" id="exampleFormControlInput1" placeholder="Escribe algo...">
+                                            <button class="btn btn-primary ms-2">
+                                                <i class="fas fa-paper-plane"></i>
+                                            </button>
+                                        </div>
                                     </div>
+                                    
                                 </div>
-
-
-                                <!-- row -->
-                                <div class="row mt-8">
-                                    <div class="col">
-                                        <!-- nav -->
-                                        <nav>
-                                            <ul class="pagination">
-                                                <li class="page-item disabled">
-                                                    <a class="page-link mx-1" href="#" aria-label="Previous">
-                                                        <i class="feather-icon icon-chevron-left"></i>
-                                                    </a>
-                                                </li>
-                                                <li class="page-item"><a class="page-link mx-1 active" href="#">1</a></li>
-                                                <li class="page-item"><a class="page-link mx-1" href="#">2</a></li>
-
-                                                <li class="page-item"><a class="page-link mx-1" href="#">...</a></li>
-                                                <li class="page-item"><a class="page-link mx-1" href="#">12</a></li>
-                                                <li class="page-item">
-                                                    <a class="page-link mx-1" href="#" aria-label="Next">
-                                                        <i class="feather-icon icon-chevron-right"></i>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                </div>
-                            </section>
+                            </div>
                         </div>
-                    </div>
+                    </section>
                 </div>
+
+
+
+
+
             </main>
 
-            <!-- Libs JS -->
-            <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
-
-            <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-            <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
-
-            <!-- Theme JS -->
-            <script src="../assets/js/theme.min.js"></script>
-
-            <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
-            <script src="../assets/js/vendors/chart.js"></script>
 
 
+
+        </div>
+
+        <!-- Libs JS -->
+        <!-- <script src="../assets/libs/jquery/dist/jquery.min.js"></script> -->
+
+        <script src="../assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../assets/libs/simplebar/dist/simplebar.min.js"></script>
+
+        <!-- Theme JS -->
+        <script src="../assets/js/theme.min.js"></script>
+
+        <script src="../assets/libs/apexcharts/dist/apexcharts.min.js"></script>
+        <script src="../assets/js/vendors/chart.js"></script>
     </body>
 </html>
