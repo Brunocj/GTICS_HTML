@@ -26,12 +26,13 @@
 
 <body>
 <!-- navbar -->
+<!-- navbar -->
 <div class="border-bottom">
     <div class="py-5">
         <div class="container">
             <div class="row w-100 align-items-center gx-lg-2 gx-0">
                 <div class="col-xxl-2 col-lg-3 col-md-6 col-5">
-                    <a class="navbar-brand d-none d-lg-block" href="../index.html">
+                    <a class="navbar-brand d-none d-lg-block" href="pagina_principalUF.html">
                         <img src="../assets/images/logo/logoGTICS.jpeg" alt="" width="200" height="auto" />
                     </a>
                     <div class="d-flex justify-content-between w-100 d-lg-none">
@@ -67,10 +68,7 @@
                 </div>
                 <div class="col-md-2 col-xxl-3 d-none d-lg-block">
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-gray-400 text-muted" data-bs-toggle="modal" data-bs-target="#locationModal">
-                        <i class="feather-icon icon-map-pin me-2"></i>
-                        Ubicación
-                    </button>
+
                 </div>
                 <div class="col-lg-2 col-xxl-2 text-end col-md-6 col-7 d-flex align-items-center justify-content-end">
                     <div class="list-inline mb-0">
@@ -84,7 +82,7 @@
                                         <path d="M1 1h4l2 13h13"></path>
                                         <path d="M6 6h15l-1.68 8.39a1 1 0 0 1-1 .61H7"></path>
                                     </svg>
-                                    
+
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
 											1
 											<span class="visually-hidden">unread messages</span>
@@ -171,7 +169,7 @@
         <div class="container">
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navbar-default" aria-labelledby="navbar-defaultLabel">
                 <div class="offcanvas-header pb-1">
-                    <a href="./index.html"><img src="../assets/images/logo/logo.svg" alt="eCommerce HTML Template" /></a>
+                    <a href="./index.html"><img src="/static/images/logo/logo.svg" alt="eCommerce HTML Template" /></a>
                     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -230,56 +228,39 @@
                             Todas las categorías
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Salud y Belleza</a></li>
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Electrónica y tecnología</a></li>
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Moda y ropa</a></li>
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Hogar y cocina</a></li>
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Arte y manualidades</a></li>
-                            <li><a class="dropdown-item" href="/pages/shop-grid.html">Deportes y ocio</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Salud y Belleza</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Electrónica y tecnología</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Moda y ropa</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Hogar y cocina</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Arte y manualidades</a></li>
+                            <li><a class="dropdown-item" href="categoria.html">Deportes y ocio</a></li>
                         </ul>
                     </div>
                     <div>
                         <ul class="navbar-nav align-items-center">
                             <li class="nav-item dropdown w-100 w-lg-auto">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Inicio</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/pages/store-list.html">Store List</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-grid.html">Store Grid</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-single.html">Store Single</a></li>
-                                </ul>
+                                <a class="nav-link " href="pagina_principalUF.html"   aria-expanded="false">Inicio</a>
+
                             </li>
                             <li class="nav-item dropdown w-100 w-lg-auto">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Productos</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/pages/store-list.html">Store List</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-grid.html">Store Grid</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-single.html">Store Single</a></li>
-                                </ul>
+                                <a class="nav-link " href="productos.html" aria-expanded="false">Productos</a>
+
                             </li>
                             <li class="nav-item dropdown w-100 w-lg-auto">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mis compras</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/pages/store-list.html">Store List</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-grid.html">Store Grid</a></li>
-                                    <li><a class="dropdown-item" href="/pages/store-single.html">Store Single</a></li>
-                                </ul>
+                                <a class="nav-link " href="listaMisOrdenes.html"  aria-expanded="false">Mis compras</a>
+
                             </li>
                             <li class="nav-item dropdown w-100 w-lg-auto">
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Mensajería</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="/pages/store-list.html">Store List</a></li>
-                                    <li><a class="dropdown-item" href="
-                  /pages/store-grid.html">Store Grid</a></li>
-                                    <li><a class="dropdown-item" href="../pages/store-single.html">Store Single</a></li>
+                                    <li><a class="dropdown-item" href="foro.html">Reseñas</a></li>
+                                    <li><a class="dropdown-item" href="../pages/store-grid.html">Preguntas frecuentes</a></li>
+
                                 </ul>
                             </li>
                             <li class="nav-item dropdown w-100 w-lg-auto">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Soporte Técnico</a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="../pages/store-list.html">Store List</a></li>
-                                    <li><a class="dropdown-item" href="../pages/store-grid.html">Store Grid</a></li>
-                                    <li><a class="dropdown-item" href="../pages/store-single.html">Store Single</a></li>
-                                </ul>
+                                <a class="nav-link " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Soporte Técnico</a>
+
                             </li>
                         </ul>
                     </div>
